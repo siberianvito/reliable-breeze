@@ -154,6 +154,16 @@ footer a{color:var(--ink-2);margin-left:18px}
 footer a:first-of-type{margin-left:0}
 footer a:hover{color:var(--blue)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* contact: text left, form right */
+.contact-main{border-bottom:0}
+.contact-main .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:start;padding-bottom:clamp(60px,8vw,120px)}
+.contact-main h1{font-size:clamp(38px,5vw,76px);margin:22px 0 24px}
+.contact-main .c-left>p{margin-bottom:34px}
+.contact-main .ticket{position:static;max-width:520px}
+.contact-main .c-right{position:sticky;top:96px}
+.contact-main .simple{box-shadow:0 24px 60px rgba(6,26,48,.08)}
+@media(max-width:860px){.contact-main .wrap{grid-template-columns:1fr}.contact-main .c-right{position:static;order:2}}
 </style>
 <link rel="stylesheet" href="nav.css?v=3">
 </head>
@@ -172,19 +182,26 @@ footer a:hover{color:var(--blue)}
 </header>
 
 <main id="content">
-<section class="intro">
+<section class="intro contact-main">
   <div class="wrap">
-    <div>
+    <div class="c-left">
       <span class="tag">Request a quote</span>
       <h1>The last HVAC company <span class="blue">you'll need to find.</span></h1>
+      <p>Tell us what you need and we will get back to you within one business day. A real person at our Miramar office reads every message.</p>
+      <aside class="ticket" aria-label="Contact details">
+      <div class="ticket-head"><b>REACH US DIRECTLY</b><span class="mono"><i class="live" style="margin-right:8px"></i>24/7</span></div>
+      <dl class="rows">
+        <div><dt class="mono">Call</dt><dd class="set"><a href="tel:+19547758248">(954) 775-8248</a></dd></div>
+        <div><dt class="mono">Email</dt><dd class="set"><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a></dd></div>
+        <div><dt class="mono">Office</dt><dd class="set">2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</dd></div>
+        <div><dt class="mono">Hours</dt><dd class="set">Mon to Fri, 9am to 5pm<br>Saturday, 10am to 2pm<br>Sunday, closed</dd></div>
+        <div><dt class="mono">License</dt><dd class="set">CAC057175</dd></div>
+      </dl>
+      <p class="stamp"><b>Emergency?</b> Call instead of writing. The line is answered 24 hours a day, 7 days a week.</p>
+    </aside>
     </div>
-    <p>Tell us what you need and we will get back to you within one business day. A real person at our Miramar office reads every message.</p>
-  </div>
-</section>
-
-<section class="builder">
-  <div class="wrap">
-    <form id="quote" class="simple" novalidate>
+    <div class="c-right">
+      <form id="quote" class="simple" novalidate>
       <div><label class="l" for="q-name">Name</label><input type="text" id="q-name" name="name" autocomplete="name" required></div>
       <div><label class="l" for="q-phone">Phone</label><input type="tel" id="q-phone" name="phone" autocomplete="tel"></div>
       <div class="full"><label class="l" for="q-email">Email</label><input type="email" id="q-email" name="email" autocomplete="email" required></div>
@@ -206,18 +223,7 @@ footer a:hover{color:var(--blue)}
         <p class="note" id="note" role="status">Opens your email app with the request filled in. By sending, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
       </div>
     </form>
-
-    <aside class="ticket" aria-label="Contact details">
-      <div class="ticket-head"><b>REACH US DIRECTLY</b><span class="mono"><i class="live" style="margin-right:8px"></i>24/7</span></div>
-      <dl class="rows">
-        <div><dt class="mono">Call</dt><dd class="set"><a href="tel:+19547758248">(954) 775-8248</a></dd></div>
-        <div><dt class="mono">Email</dt><dd class="set"><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a></dd></div>
-        <div><dt class="mono">Office</dt><dd class="set">2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</dd></div>
-        <div><dt class="mono">Hours</dt><dd class="set">Mon to Fri, 9am to 5pm<br>Saturday, 10am to 2pm<br>Sunday, closed</dd></div>
-        <div><dt class="mono">License</dt><dd class="set">CAC057175</dd></div>
-      </dl>
-      <p class="stamp"><b>Emergency?</b> Call instead of writing. The line is answered 24 hours a day, 7 days a week.</p>
-    </aside>
+    </div>
   </div>
 </section>
 
