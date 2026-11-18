@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reliable Breeze | Commercial Air Conditioning & Refrigeration</title>
+<meta name="description" content="Reliable Breeze designs, installs and maintains commercial and residential HVAC and refrigeration systems, with 24/7 emergency AC repair.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1826; --ink-2:#44566a; --ink-3:#66778a;
+  --line:#dfe6ed; --line-2:#eef2f6; --paper:#ffffff; --wash:#f6f9fc;
+  --blue:#0a6fc2; --blue-deep:#063a73; --blue-soft:#e8f2fb; --red:#d8161b;
+  --display:"Archivo",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --gutter:clamp(20px,4vw,64px); --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-stretch:118%;font-weight:700;letter-spacing:-.02em;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(34px,5.2vw,76px)}
+h3{font-size:clamp(20px,1.8vw,26px);letter-spacing:-.01em;line-height:1.15}
+p{text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.tag{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.tag::before{content:"";width:28px;height:1px;background:var(--blue)}
+.lede{font-size:clamp(17px,1.35vw,20px);color:var(--ink-2);max-width:56ch}
+.blue{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 26px;font-family:var(--display);font-stretch:112%;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--blue);border-color:var(--blue)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn svg{width:16px;height:16px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:2000}
+.skip:focus{left:12px;top:12px}
+.legal a{color:inherit;margin-right:18px}.legal a:hover{color:var(--blue)}
+
+/* blueprint grid */
+.grid-bg{position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px),linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:24px 24px,24px 24px,120px 120px,120px 120px;opacity:.75;
+  -webkit-mask-image:radial-gradient(ellipse 85% 75% at 60% 50%,#000 30%,transparent 100%);mask-image:radial-gradient(ellipse 85% 75% at 60% 50%,#000 30%,transparent 100%)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;height:76px;display:flex;align-items:center;transition:background .3s,box-shadow .3s,height .3s}
+.nav.scrolled{background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line);height:64px}
+.nav .wrap{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:42px;width:auto}
+.brand b{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:15px;letter-spacing:.1em;line-height:1.1;display:block}
+.brand b i{font-style:normal;color:var(--blue)}
+.brand small{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase;display:block;margin-top:3px}
+.nav-links{display:flex;gap:clamp(18px,2.4vw,34px);font-size:14px;font-weight:500;color:var(--ink-2)}
+.nav-links a{position:relative;padding:6px 0;white-space:nowrap}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{transform:scaleX(1)}
+.nav .btn{height:42px;padding:0 20px;font-size:12px}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;white-space:nowrap}
+.nav-phone small{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.nav-phone b{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16px;letter-spacing:.01em}
+.nav-phone:hover b{color:var(--blue)}
+.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(216,22,27,.5);animation:live 1.8s ease-out infinite;flex:none}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(216,22,27,.5)}100%{box-shadow:0 0 0 9px rgba(216,22,27,0)}}
+@media(max-width:1180px){.brand small{display:none}}
+@media(max-width:1100px){.nav-links{display:none}}
+@media(max-width:560px){.nav .nav-cta .btn{display:none}.nav-phone{border:1px solid var(--ink);padding:6px 12px;align-items:center}.nav-phone b{font-size:14px}}
+@media(max-width:520px){.brand img{height:34px}.brand{gap:10px}.brand b{font-size:11.5px;letter-spacing:.06em}.nav .btn{height:38px;padding:0 12px;font-size:10.5px;letter-spacing:.05em}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:440vh}
+.stage{position:sticky;top:0;height:100vh;min-height:560px;overflow:hidden;perspective:1800px}
+.unit-wrap{position:absolute;right:-4vw;top:50%;width:min(74vw,1280px);aspect-ratio:2688/1520;transform:translateY(-46%);will-change:transform}
+.unit{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.unit img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.unit .render{clip-path:inset(0 100% 0 0)}
+.unit .exploded{opacity:0}
+.scan{position:absolute;top:4%;bottom:4%;left:0;width:1px;background:var(--blue);opacity:0;box-shadow:0 0 0 1px rgba(10,111,194,.12),0 0 34px 6px rgba(10,111,194,.35)}
+.scan::before,.scan::after{content:"";position:absolute;left:-4px;width:9px;height:9px;border:1px solid var(--blue);background:#fff}
+.scan::before{top:-5px}.scan::after{bottom:-5px}
+.stage .grid-bg{z-index:1;opacity:.5}
+.hero-copy{position:absolute;z-index:3;left:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));top:50%;transform:translateY(-50%);width:min(560px,88vw)}
+.cap{position:absolute;left:0;top:50%;width:100%;transform:translateY(-50%);opacity:0;pointer-events:none;will-change:opacity,transform}
+.cap.on{pointer-events:auto}
+.cap h1,.cap h2{font-size:clamp(40px,5.6vw,88px);margin:22px 0 22px}
+.cap .lede{max-width:44ch}
+.cap .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.copy-veil{position:absolute;z-index:2;inset:0 auto 0 0;width:62vw;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,.94) 48%,rgba(255,255,255,0) 100%);pointer-events:none}
+.schedule{margin-top:26px;border-top:1px solid var(--ink);max-width:400px}
+.schedule li{list-style:none;display:flex;gap:16px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-3);transition:color .3s}
+.schedule li span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;width:28px}
+.schedule li em{margin-left:auto;font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.schedule li.lit{color:var(--ink)}.schedule li.lit span{color:var(--blue)}.schedule li.lit em{opacity:1;color:var(--blue)}
+/* HUD */
+.hud{position:absolute;z-index:4;pointer-events:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.hud.tr{right:var(--gutter);top:100px;text-align:right;line-height:1.9}
+.hud.br{right:var(--gutter);bottom:34px;display:flex;align-items:center;gap:14px}
+.hud.bl{left:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));bottom:34px;display:flex;align-items:center;gap:12px}
+.hud b{color:var(--blue);font-weight:500}
+.meter{width:140px;height:1px;background:var(--line);position:relative}
+.meter i{position:absolute;left:0;top:-1px;height:3px;width:100%;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+.mouse{width:1px;height:34px;background:var(--line);position:relative;overflow:hidden}
+.mouse::after{content:"";position:absolute;left:0;top:0;width:1px;height:14px;background:var(--blue);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:translateY(-14px)}100%{transform:translateY(34px)}}
+.crop{position:absolute;z-index:4;width:18px;height:18px;border:1px solid var(--ink-3);opacity:.5;pointer-events:none}
+.crop.a{left:18px;top:92px;border-right:0;border-bottom:0}.crop.b{right:18px;top:92px;border-left:0;border-bottom:0}
+.crop.c{left:18px;bottom:18px;border-right:0;border-top:0}.crop.d{right:18px;bottom:18px;border-left:0;border-top:0}
+@media(max-width:900px){
+  .hero{height:380vh}
+  .unit-wrap{right:auto;left:50%;width:128vw;top:34%;transform:translate(-50%,-50%)}
+  .hero-copy{top:auto;bottom:86px;transform:none;height:44vh}
+  .cap{top:auto;bottom:0;transform:none}
+  .cap h1,.cap h2{margin:14px 0 14px}
+  .copy-veil{inset:auto 0 0 0;width:100%;height:60vh;background:linear-gradient(0deg,#fff 0,rgba(255,255,255,.96) 70%,rgba(255,255,255,0) 100%)}
+  .hud.tr,.crop{display:none}.hud.br{display:none}
+  .unit-wrap{top:27%}
+  .cap .lede{font-size:15px;line-height:1.5}
+  .cap h1,.cap h2{font-size:clamp(34px,10.5vw,56px)}
+  .cap .cta .btn{height:46px;padding:0 16px;font-size:12px}
+  .copy-veil{height:66vh;background:linear-gradient(0deg,#fff 0,rgba(255,255,255,.97) 78%,rgba(255,255,255,0) 100%)}
+  .schedule li{padding:6px 0;font-size:13.5px}.schedule{margin-top:14px}
+  .cap .cta{margin-top:20px}
+}
+
+/* ---------- STATS ---------- */
+.stats{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:#fff;position:relative;z-index:2}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:44px 28px 40px 0;border-left:1px solid var(--line);padding-left:28px}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .n{font-family:var(--display);font-stretch:118%;font-weight:700;font-size:clamp(38px,4.6vw,68px);letter-spacing:-.03em;line-height:1}
+.stat .n sup{font-size:.42em;color:var(--blue);margin-left:4px;vertical-align:top;position:relative;top:.3em;letter-spacing:0}
+.stat p{margin-top:12px;font-size:14px;color:var(--ink-2);max-width:22ch}
+@media(max-width:820px){.stats .wrap{grid-template-columns:1fr 1fr}.stat{padding:28px 16px 26px 20px}.stat:nth-child(odd){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:clamp(88px,11vw,170px) 0}
+.sec-head{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.sec-head h2{margin-top:22px}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* manifesto */
+.manifesto{padding:clamp(90px,12vw,180px) 0 clamp(60px,8vw,110px)}
+.manifesto p.big{font-family:var(--display);font-stretch:112%;font-weight:500;font-size:clamp(26px,3.5vw,52px);line-height:1.14;letter-spacing:-.02em;max-width:24ch;max-width:min(1100px,100%)}
+.manifesto p.big span{color:var(--ink-3);transition:color .5s}
+.manifesto p.big span.lit{color:var(--ink)}
+.manifesto p.big span.lit.k{color:var(--blue)}
+
+/* ---------- STUDY (tower) ---------- */
+.study{height:400vh}
+.study-stage{position:sticky;top:0;height:100vh;min-height:560px;overflow:hidden;background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.study-stage .grid-bg{-webkit-mask-image:none;mask-image:none;opacity:.6}
+.study-grid{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,5vw,80px);align-items:center}
+.study-copy{position:relative;height:min(520px,70vh)}
+.step{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s;pointer-events:none}
+.step.on{opacity:1;transform:none;pointer-events:auto}
+.step .num{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--blue)}
+.step h2{font-size:clamp(32px,4.2vw,62px);margin:20px 0}
+.step dl{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:8px 22px;font-size:14px;border-top:1px solid var(--line);padding-top:18px;max-width:440px}
+.step dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
+.step dd{color:var(--ink-2)}
+.tower-frame{position:relative;height:min(84vh,820px);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.tower-frame img{width:100%;height:100%;object-fit:contain;transition:transform 1.3s cubic-bezier(.65,0,.2,1);will-change:transform}
+.tower-frame .tick{position:absolute;left:14px;top:14px;z-index:2}
+.tower-frame .tick2{position:absolute;right:14px;bottom:14px;z-index:2;color:var(--blue)}
+.reticle{position:absolute;left:50%;top:50%;width:120px;height:120px;margin:-60px 0 0 -60px;border:1px solid rgba(10,111,194,.55);border-radius:50%;opacity:0;transition:opacity .6s .5s;pointer-events:none}
+.reticle::before,.reticle::after{content:"";position:absolute;background:rgba(10,111,194,.55)}
+.reticle::before{left:50%;top:-14px;bottom:-14px;width:1px}.reticle::after{top:50%;left:-14px;right:-14px;height:1px}
+.tower-frame.zoom .reticle{opacity:1}
+.study-rail{position:absolute;z-index:3;left:50%;bottom:28px;transform:translateX(-50%);display:flex;gap:8px}
+.study-rail i{width:38px;height:2px;background:var(--line);transition:background .4s}
+.study-rail i.on{background:var(--blue)}
+@media(max-width:900px){
+  .study-grid{grid-template-columns:1fr;grid-template-rows:46vh 1fr;gap:0;align-items:stretch;padding-top:70px}
+  .tower-frame{height:auto;order:-1;margin:0 calc(var(--gutter)*-1);border-left:0;border-right:0}
+  .study-copy{height:auto}
+  .step{justify-content:flex-start;padding-top:22px}
+  .step h2{margin:10px 0 10px}.step dl{margin-top:12px;padding-top:10px;gap:4px 16px;font-size:13px}
+  .step .lede{font-size:15px}
+  .study-rail{bottom:14px}
+}
+
+/* ---------- SERVICES ---------- */
+.caps{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.capcard{position:relative;overflow:hidden;background:var(--wash);border:1px solid var(--line);min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;isolation:isolate}
+.capcard:nth-child(1){grid-column:span 7}.capcard:nth-child(2){grid-column:span 5}
+.capcard:nth-child(3){grid-column:span 5}.capcard:nth-child(4){grid-column:span 7}
+.capcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.capcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,26,48,0) 30%,rgba(6,26,48,.86) 100%)}
+.capcard:hover img{transform:scale(1.06)}
+.capcard .body{padding:30px}
+.capcard .idx{position:absolute;left:30px;top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ink);background:#fff;padding:5px 10px}
+.capcard h3{font-size:clamp(22px,2.3vw,34px)}
+.capcard p{margin-top:10px;font-size:15px;color:rgba(255,255,255,.84);max-width:46ch}
+.capcard ul{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;list-style:none}
+.capcard li{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:5px 9px}
+@media(max-width:860px){.capcard{grid-column:1/-1!important;min-height:360px}}
+.speclist{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.speclist div{padding:26px 26px 26px 0;border-bottom:1px solid var(--line)}
+.speclist div{padding-left:26px;border-left:1px solid var(--line)}
+.speclist div:nth-child(3n+1){padding-left:0;border-left:0}
+.speclist h3{font-size:19px;margin:10px 0 8px}
+.speclist p{font-size:14.5px;color:var(--ink-2)}
+@media(max-width:860px){.speclist{grid-template-columns:1fr}.speclist div{padding-left:0;border-left:0}}
+
+/* ---------- EMERGENCY + OFFER ---------- */
+.emergency{background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.emergency .grid-bg{-webkit-mask-image:linear-gradient(90deg,transparent 20%,#000);mask-image:linear-gradient(90deg,transparent 20%,#000);opacity:.6}
+.emergency .wrap{position:relative;z-index:2}
+.tag.red{color:var(--red)}.tag.red::before{display:none}
+.em-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.em-grid h2{margin:22px 0;font-size:clamp(34px,4.6vw,66px)}
+.em-phone{display:inline-flex;flex-direction:column;gap:6px;margin-top:34px;padding:18px 26px 16px;background:#fff;border:1px solid var(--ink);border-left:4px solid var(--red);transition:background .25s,color .25s}
+.em-phone b{font-family:var(--display);font-stretch:118%;font-weight:700;font-size:clamp(28px,3.4vw,46px);letter-spacing:-.01em;line-height:1}
+.em-phone:hover{background:var(--ink);color:#fff}.em-phone:hover .mono{color:#b9c7d6}
+.em-cols{display:grid;gap:16px}
+.em-card{background:#fff;border:1px solid var(--line);padding:26px 28px}
+.em-card h3{margin:10px 0 12px}
+.em-photo{width:calc(100% + 56px);max-width:none;margin:-26px -28px 22px;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.em-card ul{list-style:none;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
+.em-card li{display:flex;gap:12px;align-items:baseline}
+.em-card li::before{content:"";width:14px;height:1px;background:var(--blue);flex:none;transform:translateY(-4px)}
+.offer{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(20px,4vw,56px);align-items:center;background:var(--ink);color:#fff;padding:clamp(24px,3.4vw,44px) clamp(22px,3.6vw,52px)}
+.offer .pct{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:clamp(72px,10vw,150px);line-height:.85;letter-spacing:-.04em;color:#fff}
+.offer .pct sup{font-size:.3em;letter-spacing:.06em;color:#6cb6f5;vertical-align:top;position:relative;top:.35em;margin-left:6px}
+.offer .mono{color:#6cb6f5}
+.offer h3{font-size:clamp(22px,2.4vw,34px);margin:10px 0 10px}
+.offer p{color:#b9c7d6;font-size:15.5px;max-width:52ch}
+.offer .btn{background:#fff;color:var(--ink);border-color:#fff}
+.offer .btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.offer .fine{display:block;margin-top:12px;color:#8fa1b3;font-size:10px}
+@media(max-width:900px){.em-grid{grid-template-columns:1fr}.offer{grid-template-columns:1fr}}
+
+/* ---------- SECTORS ---------- */
+.sectors{background:var(--ink);color:#fff}
+.sectors .tag{color:#6cb6f5}.sectors .tag::before{background:#6cb6f5}
+.sectors .lede{color:#a9b9c9}
+.sector-list{border-top:1px solid rgba(255,255,255,.22)}
+.sector{display:grid;grid-template-columns:70px 1.1fr 1.4fr 40px;gap:20px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14);transition:padding .35s,background .35s}
+.sector .mono{color:#6c7f92}
+.sector h3{font-size:clamp(22px,2.6vw,38px);transition:color .3s}
+.sector p{font-size:15px;color:#a9b9c9}
+.sector svg{width:22px;height:22px;opacity:.35;transition:opacity .3s,transform .3s}
+.sector:hover{padding-left:18px;background:rgba(255,255,255,.03)}
+.sector:hover h3{color:#6cb6f5}.sector:hover svg{opacity:1;transform:translateX(4px)}
+@media(max-width:760px){.sector{grid-template-columns:44px 1fr;row-gap:6px}.sector p{grid-column:2}.sector svg{display:none}}
+
+/* ---------- PROCESS (horizontal) ---------- */
+.process{height:360vh}
+.process-stage{position:sticky;top:0;height:100vh;min-height:600px;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.process-head{margin-bottom:clamp(28px,5vh,60px)}
+.process-head h2{margin-top:20px;font-size:clamp(32px,4.4vw,64px)}
+.track{display:flex;gap:0;padding-left:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));will-change:transform}
+.phase{flex:0 0 min(440px,78vw);padding:0 44px 0 0;position:relative}
+.phase .bar{height:1px;background:var(--line);position:relative;margin-bottom:30px}
+.phase .bar::before{content:"";position:absolute;left:0;top:-5px;width:11px;height:11px;border:1px solid var(--blue);background:#fff;transition:background .4s}
+.phase .bar i{position:absolute;left:0;top:-1px;height:3px;width:100%;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+.phase.on .bar::before{background:var(--blue)}
+.phase .big{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:clamp(70px,9vw,130px);line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px #c5d2de;transition:color .5s,-webkit-text-stroke-color .5s}
+.phase.on .big{color:var(--ink);-webkit-text-stroke-color:var(--ink)}
+.phase h3{margin:22px 0 10px;font-size:24px}
+.phase p{font-size:15px;color:var(--ink-2);max-width:34ch}
+.phase .mono{display:block;margin-top:16px}
+@media(max-width:820px){
+  .process{height:auto}.process-stage{position:static;height:auto;padding:90px 0;overflow:visible}
+  .track{flex-direction:column;gap:46px;padding:0 var(--gutter);transform:none!important}
+  .phase{flex:auto;padding:0}.phase .big{color:var(--ink);-webkit-text-stroke-color:var(--ink);font-size:64px}
+}
+
+/* ---------- PARTNER ---------- */
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.partner-img{position:relative}
+.partner-img img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.partner-img .plate{position:absolute;left:-1px;bottom:-1px;background:#fff;padding:18px 24px 0 0;max-width:290px}
+.partner-img .plate b{font-family:var(--display);font-stretch:118%;font-size:40px;letter-spacing:-.03em;display:block;line-height:1}
+.partner-img .plate span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:8px}
+.versus{margin-top:34px;border-top:1px solid var(--ink)}
+.versus .row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.versus .row>*{padding:15px 0;font-size:15px}
+.versus .row>:first-child{color:var(--ink-3);text-decoration:line-through;text-decoration-color:#c9d3dd;padding-right:18px}
+.versus .row>:last-child{font-weight:500;padding-left:18px;border-left:1px solid var(--line)}
+.versus .row.h>*{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:400}
+.versus .row.h>:last-child{color:var(--blue)}
+@media(max-width:860px){.partner-grid{grid-template-columns:1fr}}
+
+/* band */
+.band{position:relative;height:min(78vh,720px);overflow:hidden;color:#fff;display:flex;align-items:flex-end}
+.band img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,48,.05) 35%,rgba(6,26,48,.8))}
+.band .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(36px,6vw,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.band h2{max-width:14ch}
+.band .mono{color:rgba(255,255,255,.8)}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--wash);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,6vw,100px)}
+.contact h2{margin:22px 0 22px}
+.contact-meta{margin-top:40px;border-top:1px solid var(--ink)}
+.contact-meta div{display:grid;grid-template-columns:130px 1fr;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.contact-meta .mono{padding-top:4px}
+form{background:#fff;border:1px solid var(--line);padding:clamp(22px,3vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:0;border-bottom:1px solid #b9c5d1;padding:10px 0;border-radius:0;appearance:none;-webkit-appearance:none;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 1px 0 var(--blue)}
+textarea{resize:vertical;min-height:96px}
+form .btn{width:100%;justify-content:center}
+.form-note{font-size:13px;color:var(--ink-3)}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+.map{position:relative;height:min(70vh,560px);border-top:1px solid var(--ink);background:var(--wash)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.55) contrast(1.05)}
+.map-card{position:absolute;z-index:2;right:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));top:50%;transform:translateY(-50%);width:min(360px,calc(100vw - 2*var(--gutter)));background:#fff;border:1px solid var(--ink);padding:28px 30px;box-shadow:0 18px 50px rgba(6,26,48,.18)}
+.map-card h3{margin:16px 0 8px;font-size:26px}
+.map-card p{font-size:15.5px;color:var(--ink-2)}
+.map-card p.mono{margin:14px 0 20px;line-height:1.9;font-size:10.5px}
+.map-card .btn{height:46px;padding:0 20px;font-size:12px}
+@media(max-width:760px){.map{height:auto;display:flex;flex-direction:column}.map iframe{position:static;height:320px}.map-card{position:static;transform:none;width:auto;border-left:0;border-right:0;box-shadow:none;padding:26px var(--gutter)}}
+footer{padding:64px 0 34px;border-top:1px solid var(--line)}
+.foot{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:40px}
+.foot img{width:190px}
+.foot h4{font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.foot a,.foot p{display:block;font-size:14.5px;color:var(--ink-2);padding:3px 0}
+.foot a:hover{color:var(--blue)}
+.legal{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.foot{grid-template-columns:1fr 1fr}}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .mouse::after{animation:none}
+  .tower-frame img,.capcard img{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Reliable Breeze home">
+      <img src="assets/logo-mark.png" alt="">
+      <span><b><span style="color:var(--red)">RELIABLE</span> <i>BREEZE</i></b><small>Air Conditioning &amp; Refrigeration</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#emergency">24/7 Repair</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#process">Process</a>
+      <a href="#partner">Why us</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+19547758248" aria-label="Call our 24/7 emergency line, (954) 775-8248"><small><i class="live"></i>24/7 Emergency</small><b>(954) 775-8248</b></a>
+      <a class="btn" href="#contact">Request a quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO: blueprint → built → dissected ================= -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="stage">
+    <div class="unit-wrap" id="unitWrap">
+      <div class="unit" id="unit">
+        <img class="blueprint" src="assets/blueprint.jpg" alt="Blueprint line drawing of a commercial rooftop air handling unit" fetchpriority="high">
+        <img class="render" id="render" src="assets/unit.jpg" alt="">
+        <img class="exploded" id="exploded" src="assets/exploded.jpg" alt="">
+        <div class="scan" id="scan"></div>
+      </div>
+    </div>
+    <div class="grid-bg"></div>
+    <div class="copy-veil"></div>
+
+    <div class="hero-copy">
+      <div class="cap" data-cap="0">
+        <span class="tag">Commercial &amp; residential HVAC / 24/7</span>
+        <h1>The architecture <span class="blue">of air.</span></h1>
+        <p class="lede">Every great building has a second structure you never see. We design it, build it and keep it running around the clock, from commercial towers to the home you live in.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Request a quote <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn ghost" href="#services">Services</a>
+        </div>
+      </div>
+      <div class="cap" data-cap="1">
+        <span class="tag">01 / Drawn, then built</span>
+        <h2>From the line to the <span class="blue">machine.</span></h2>
+        <p class="lede">Nothing reaches your roof that was not first resolved on paper. Loads calculated, airflow modeled, every clearance coordinated with structure and the other trades.</p>
+      </div>
+      <div class="cap" data-cap="2">
+        <span class="tag">02 / Known inside out</span>
+        <h2>We know every <span class="blue">part of it.</span></h2>
+        <ul class="schedule" id="schedule">
+          <li><span>A1</span>Condenser fan array<em>Heat rejection</em></li>
+          <li><span>A2</span>Evaporator &amp; condenser coils<em>Heat transfer</em></li>
+          <li><span>A3</span>Scroll compressors<em>Refrigeration</em></li>
+          <li><span>A4</span>Supply blower<em>Air movement</em></li>
+          <li><span>A5</span>Filtration bank<em>Air quality</em></li>
+          <li><span>A6</span>Controls &amp; automation<em>Intelligence</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hud tr">Sheet <b>M-001</b><br>Packaged rooftop unit<br>Isometric / not to scale<br><span id="hudPhase">Phase: <b>Design</b></span></div>
+    <div class="hud bl"><span class="mouse"></span><span>Scroll to dissect</span></div>
+    <div class="hud br"><span>Dissection</span><span class="meter"><i id="meter"></i></span><b id="pct">000%</b></div>
+    <i class="crop a"></i><i class="crop b"></i><i class="crop c"></i><i class="crop d"></i>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats" aria-label="Company figures">
+  <div class="wrap">
+    <div class="stat rv"><div class="n"><span data-count="25">25</span><sup>+</sup></div><p>Years engineering commercial mechanical systems</p></div>
+    <div class="stat rv" style="--d:.08s"><div class="n"><span data-count="4.2" data-dec="1">4.2</span><sup>M</sup></div><p>Square feet of conditioned space delivered</p></div>
+    <div class="stat rv" style="--d:.16s"><div class="n"><span data-count="600">600</span><sup>+</sup></div><p>Commercial projects completed</p></div>
+    <div class="stat rv" style="--d:.24s"><div class="n">24<sup>/7</sup></div><p>Emergency AC repair, commercial and residential</p></div>
+  </div>
+</section>
+
+<!-- ================= MANIFESTO ================= -->
+<section class="manifesto">
+  <div class="wrap">
+    <span class="tag rv">Our position</span>
+    <p class="big rv" id="manifesto" style="margin-top:26px">A building breathes through its mechanical systems. We treat them the way an architect treats structure: planned first, drawn precisely, built once, and maintained for the life of the asset.</p>
+  </div>
+</section>
+
+<!-- ================= STUDY: the building ================= -->
+<section class="study" id="approach" aria-label="Our approach">
+  <div class="study-stage">
+    <div class="grid-bg"></div>
+    <div class="wrap study-grid">
+      <div class="study-copy">
+        <div class="step on">
+          <span class="num">CHAPTER 02 / SECTION A-A</span>
+          <h2>We read the building <span class="blue">before we touch it.</span></h2>
+          <p class="lede">Occupancy, envelope, orientation, process loads. The system is designed around how your building actually lives, not around a catalog.</p>
+          <dl><dt>Deliverable</dt><dd>Load calculations and system selection report</dd><dt>Standard</dt><dd>ASHRAE and local energy code</dd></dl>
+        </div>
+        <div class="step">
+          <span class="num">DETAIL 01 / ROOF LEVEL</span>
+          <h2>The plant. <span class="blue">Where capacity lives.</span></h2>
+          <p class="lede">Chillers, cooling towers and rooftop units sized with redundancy, set on engineered supports and placed for service access years from now.</p>
+          <dl><dt>Scope</dt><dd>Chillers, towers, packaged units, pumps</dd><dt>Logistics</dt><dd>Crane picks, rigging plans, phased shutdowns</dd></dl>
+        </div>
+        <div class="step">
+          <span class="num">DETAIL 02 / CORE RISERS</span>
+          <h2>The spine. <span class="blue">Air and water, vertical.</span></h2>
+          <p class="lede">Supply, return and chilled water risers coordinated in 3D with structure, electrical and fire protection, so nothing clashes in the field.</p>
+          <dl><dt>Method</dt><dd>BIM coordination and shop drawings</dd><dt>Result</dt><dd>Fewer change orders, a faster schedule</dd></dl>
+        </div>
+        <div class="step">
+          <span class="num">DETAIL 03 / TYPICAL FLOOR</span>
+          <h2>The floor. <span class="blue">Where people feel it.</span></h2>
+          <p class="lede">Balanced distribution, quiet terminals and zone-level control. Comfort your tenants never have to think about.</p>
+          <dl><dt>Commissioning</dt><dd>Test, adjust and balance on every zone</dd><dt>Handover</dt><dd>As-builts, O&amp;M manuals, staff training</dd></dl>
+        </div>
+      </div>
+      <div class="tower-frame" id="towerFrame">
+        <span class="mono tick">Section model / mechanical</span>
+        <span class="mono tick2" id="towerZoom">1.0x</span>
+        <img id="tower" src="assets/tower.jpg" alt="Cutaway model of a commercial tower showing ductwork risers in blue and the rooftop mechanical plant" loading="lazy">
+        <div class="reticle"></div>
+      </div>
+    </div>
+    <div class="study-rail" id="studyRail"><i class="on"></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag rv">Chapter 03 / Services</span><h2 class="rv">Four disciplines. <span class="blue">One standard.</span></h2></div>
+      <p class="lede rv">One accountable team for design, installation, maintenance and 24/7 repair, on commercial buildings and in homes. Self-performed by our own engineers and technicians.</p>
+    </div>
+    <div class="caps">
+      <article class="capcard rv"><img src="assets/ducts.jpg" alt="Exposed ductwork in a commercial office floor" loading="lazy"><span class="idx">SV-01</span><div class="body"><h3>Commercial HVAC design-build</h3><p>New construction and tenant improvements, engineered and installed under one contract.</p><ul><li>VRF</li><li>VAV</li><li>Rooftop units</li><li>DOAS</li></ul></div></article>
+      <article class="capcard rv" style="--d:.1s"><img src="assets/plant.jpg" alt="Central plant with chillers and chilled water piping" loading="lazy"><span class="idx">SV-02</span><div class="body"><h3>Central plants &amp; chillers</h3><p>Chilled water systems, towers, pumps and piping for large-load buildings.</p><ul><li>Chillers</li><li>Cooling towers</li><li>Hydronics</li></ul></div></article>
+      <article class="capcard rv"><img src="assets/cold.jpg" alt="Industrial cold storage facility with ceiling evaporators" loading="lazy"><span class="idx">SV-03</span><div class="body"><h3>Commercial refrigeration</h3><p>Cold storage, walk-ins and process cooling held to temperature around the clock.</p><ul><li>Cold storage</li><li>Rack systems</li><li>Process cooling</li></ul></div></article>
+      <article class="capcard rv" style="--d:.1s"><img src="assets/rooftop.jpg" alt="Rooftop of a commercial building with rows of mechanical units" loading="lazy"><span class="idx">SV-04</span><div class="body"><h3>Retrofits &amp; energy upgrades</h3><p>Equipment replacement in occupied buildings, phased so your tenants never lose cooling.</p><ul><li>Replacements</li><li>Controls upgrades</li><li>Efficiency</li></ul></div></article>
+    </div>
+    <div class="speclist">
+      <div class="rv"><span class="mono" style="color:var(--red)">SV-05 / 24/7</span><h3>Emergency AC repair</h3><p>Day or night response for commercial buildings and homes, by technicians who know the equipment inside out.</p></div>
+      <div class="rv" style="--d:.08s"><span class="mono">SV-06</span><h3>New AC installation</h3><p>New units and full system replacements, sized correctly and installed with warranty. Now 20% off installation.</p></div>
+      <div class="rv" style="--d:.16s"><span class="mono">SV-07</span><h3>Residential air conditioning</h3><p>Home comfort systems installed, serviced and repaired to the same standard as our commercial work.</p></div>
+      <div class="rv"><span class="mono">SV-08</span><h3>Planned maintenance</h3><p>Service agreements with scheduled inspections, documented reports and budget forecasting.</p></div>
+      <div class="rv" style="--d:.08s"><span class="mono">SV-09</span><h3>Building automation</h3><p>Controls integration, monitoring and trend data that show how the building is performing.</p></div>
+      <div class="rv" style="--d:.16s"><span class="mono">SV-10</span><h3>Indoor air quality</h3><p>Filtration, ventilation and humidity control for healthier offices, facilities and homes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 24/7 EMERGENCY + OFFER ================= -->
+<section class="sec emergency" id="emergency">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="em-grid">
+      <div>
+        <span class="tag red rv"><i class="live"></i>On call now / 24 hours, 7 days</span>
+        <h2 class="rv">24/7 emergency HVAC. <span class="blue">Commercial and residential.</span></h2>
+        <p class="lede rv">When the cooling stops, the clock starts. The same engineers and technicians who design and build our systems answer the call, day or night, for a tower, a storefront or your home.</p>
+        <a class="em-phone rv" href="tel:+19547758248"><span class="mono">Emergency line / call anytime</span><b>(954) 775-8248</b></a>
+      </div>
+      <div class="em-cols">
+        <div class="em-card rv"><span class="mono">Response 01</span><h3>Commercial emergency service</h3><ul><li>Rooftop units, chillers and split systems</li><li>Refrigeration and cold storage failures</li><li>Priority dispatch for critical facilities</li><li>Diagnosis documented for your records</li></ul></div>
+        <div class="em-card rv" style="--d:.1s"><img class="em-photo" src="assets/residential-tech.jpg" alt="Reliable Breeze technician in a hard hat checking refrigerant pressures on an outdoor AC unit" loading="lazy" onerror="this.remove()"><span class="mono">Response 02</span><h3>Residential AC repair</h3><ul><li>No cooling, weak airflow, leaks and noise</li><li>All major brands and system types</li><li>Clear pricing before any work begins</li><li>Repair or replace, advised honestly</li></ul></div>
+      </div>
+    </div>
+    <div class="offer rv" id="offer">
+      <div class="pct" aria-hidden="true">20<sup>% OFF</sup></div>
+      <div><span class="mono">Current offer / new AC units</span><h3>20% off installation on new AC units.</h3><p>Commercial or residential. Every new system is sized by our engineers, installed by our own crews and backed by warranty.</p></div>
+      <div><a class="btn" href="#contact" data-type="New AC unit installation (20% off)">Claim 20% off <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><span class="mono fine">Terms apply. Ask for offer and warranty details.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTORS ================= -->
+<section class="sec sectors" id="sectors">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag rv">Chapter 04 / Sectors</span><h2 class="rv">From the tower to the home.</h2></div>
+      <p class="lede rv">We work with owners, general contractors, developers, property managers and homeowners.</p>
+    </div>
+    <div class="sector-list">
+      <a class="sector rv" href="#contact"><span class="mono">S-01</span><h3>Office &amp; high-rise</h3><p>Core and shell, tenant fit-outs, central plant replacement.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-02</span><h3>Healthcare &amp; labs</h3><p>Pressurization, filtration and redundancy for regulated spaces.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-03</span><h3>Hospitality &amp; multifamily</h3><p>Quiet, efficient systems across hundreds of occupied rooms.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-04</span><h3>Retail &amp; mixed-use</h3><p>Multi-site programs and landlord work delivered on rollout schedules.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-05</span><h3>Industrial &amp; cold chain</h3><p>Warehousing, food distribution and process refrigeration.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-06</span><h3>Education &amp; public</h3><p>Schools, civic buildings and campuses with long service lives.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="#contact"><span class="mono">S-07</span><h3>Residential</h3><p>New AC installation, replacement, maintenance and 24/7 repair for homes.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="process" id="process" aria-label="Process">
+  <div class="process-stage">
+    <div class="wrap process-head">
+      <span class="tag">Chapter 05 / Process</span>
+      <h2>How a system <span class="blue">comes together.</span></h2>
+    </div>
+    <div class="track" id="track">
+      <div class="phase"><div class="bar"><i></i></div><div class="big">01</div><h3>Survey</h3><p>Site walk, existing conditions, drawing review and a clear scope before a number is ever quoted.</p><span class="mono">Output / scope &amp; budget</span></div>
+      <div class="phase"><div class="bar"><i></i></div><div class="big">02</div><h3>Engineer</h3><p>Load calculations, equipment selection and coordinated shop drawings ready for permit.</p><span class="mono">Output / stamped design</span></div>
+      <div class="phase"><div class="bar"><i></i></div><div class="big">03</div><h3>Procure</h3><p>Long-lead equipment released early and tracked, so the schedule is protected from day one.</p><span class="mono">Output / submittals &amp; schedule</span></div>
+      <div class="phase"><div class="bar"><i></i></div><div class="big">04</div><h3>Install</h3><p>Our own crews, a dedicated project manager and a jobsite run to the general contractor's standard.</p><span class="mono">Output / built system</span></div>
+      <div class="phase"><div class="bar"><i></i></div><div class="big">05</div><h3>Commission</h3><p>Start-up, test and balance, controls verification and a documented handover to your team.</p><span class="mono">Output / O&amp;M and as-builts</span></div>
+      <div class="phase"><div class="bar"><i></i></div><div class="big">06</div><h3>Maintain</h3><p>Planned maintenance and priority response for the life of the equipment.</p><span class="mono">Output / uptime</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNER ================= -->
+<section class="sec" id="partner">
+  <div class="wrap partner-grid">
+    <div class="partner-img rv">
+      <img src="assets/engineers.jpg" alt="Two engineers in hard hats reviewing mechanical drawings on a tablet inside a commercial building" loading="lazy">
+      <div class="plate"><b>1 team</b><span>Engineering, installation and service under one roof.</span></div>
+    </div>
+    <div>
+      <span class="tag rv">Chapter 06 / Why Reliable Breeze</span>
+      <h2 class="rv" style="margin-top:22px;font-size:clamp(32px,4.2vw,60px)">Not a service call. <span class="blue">A mechanical partner.</span></h2>
+      <p class="lede rv" style="margin-top:22px">Owners and general contractors bring us in early because we think like the design team and deliver like a builder.</p>
+      <div class="versus rv">
+        <div class="row h"><span>The usual way</span><span>The Reliable Breeze way</span></div>
+        <div class="row"><span>A quote off a walkthrough</span><span>A scope built from the drawings</span></div>
+        <div class="row"><span>Equipment sized by rule of thumb</span><span>Engineered load calculations</span></div>
+        <div class="row"><span>Clashes found in the field</span><span>Coordination resolved in 3D</span></div>
+        <div class="row"><span>A handshake at handover</span><span>Commissioning data and as-builts</span></div>
+        <div class="row"><span>A different tech every visit</span><span>A team that knows your building</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Rooftop plant">
+  <img id="bandImg" src="assets/rooftop.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 class="rv">Designed once. Running for decades.</h2>
+    <span class="mono rv">Plate 07 / Rooftop plant, commercial tower</span>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="tag rv">Chapter 07 / Get started</span>
+      <h2 class="rv">Tell us what <span class="blue">you need.</span></h2>
+      <p class="lede rv">A new installation, a large commercial project, a system for your home or a repair. Tell us about it and we will respond within one business day. For an emergency, call the 24/7 line.</p>
+      <div class="contact-meta rv">
+        <div><span class="mono">Quotes</span><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a></div>
+        <div><span class="mono">Office</span><a href="tel:+19547758248">(954) 775-8248</a></div>
+        <div><span class="mono" style="color:var(--red)">Emergency</span><a href="tel:+19547758248">24 hours a day, 7 days a week</a></div>
+        <div><span class="mono">Address</span><span>2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</span></div>
+        <div><span class="mono">Hours</span><span>Mon to Fri, 9am to 5pm<br>Saturday, 10am to 2pm<br>Sunday, closed</span></div>
+        <div><span class="mono">License</span><span>Florida license CAC057175</span></div>
+      </div>
+    </div>
+    <form id="bidForm" class="rv" novalidate>
+      <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div><label for="f-co">Company (optional)</label><input id="f-co" name="company" autocomplete="organization"></div>
+      <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div><label for="f-prop">Property</label>
+        <select id="f-prop" name="property"><option>Commercial</option><option>Residential</option></select></div>
+      <div><label for="f-type">What do you need?</label>
+        <select id="f-type" name="type"><option>New AC unit installation (20% off)</option><option>New construction / large project</option><option>System replacement / upgrade</option><option>AC repair</option><option>Maintenance plan</option><option>Commercial refrigeration</option><option>Something else</option></select></div>
+      <div class="full"><label for="f-msg">Details</label><textarea id="f-msg" name="message" placeholder="Tell us about the building or home, the location and your timing"></textarea></div>
+      <div class="full"><button class="btn" type="submit">Request a quote <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button></div>
+      <p class="form-note full" id="formNote" role="status">Opens your email app with the details filled in.</p>
+      <p class="form-note full">By submitting, you agree to our <a href="terms.html" style="text-decoration:underline">Terms</a> and <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a>.</p>
+    </form>
+  </div>
+</section>
+<!-- ================= MAP ================= -->
+<section class="map" id="location" aria-label="Office location">
+  <iframe title="Map showing the Reliable Breeze office at 2501 Dykes Road, Miramar, Florida" src="https://www.google.com/maps?q=Reliable+Breeze+2501+Dykes+Road+Suite+300+D+Miramar+FL+33027&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  <div class="map-card">
+    <span class="tag">Plate 08 / Office</span>
+    <h3>Reliable Breeze</h3>
+    <p>2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</p>
+    <p class="mono">Mon to Fri 9am to 5pm / Sat 10am to 2pm<br><span style="color:var(--red)">Emergency service 24/7</span></p>
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=2501+Dykes+Road+Suite+300+D+Miramar+FL+33027" target="_blank" rel="noopener">Get directions <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="assets/logo-full.png" alt="Reliable Breeze Air Conditioning &amp; Refrigeration"></div>
+      <div><h4>Services</h4><a href="#services">HVAC design-build</a><a href="#emergency">24/7 emergency repair</a><a href="#offer">New AC installation</a><a href="#services">Residential AC</a><a href="#services">Refrigeration</a></div>
+      <div><h4>Company</h4><a href="#approach">Approach</a><a href="#sectors">Sectors</a><a href="#process">Process</a><a href="#partner">Why us</a></div>
+      <div><h4>Contact</h4><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a><a href="tel:+19547758248">(954) 775-8248</a><p>2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</p><p>License CAC057175</p></div>
+    </div>
+    <div class="legal mono"><span>© <span id="yr">2026</span> Reliable Breeze Air Conditioning &amp; Refrigeration / License CAC057175</span><span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="accessibility.html">Accessibility</a></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var BID_EMAIL = 'info@reliablebreeze.com'; 
+  var $ = function(s,r){return (r||document).querySelector(s)}, $$ = function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  var clamp = function(v,a,b){return Math.max(a,Math.min(b,v))};
+  var seg = function(p,a,b){return clamp((p-a)/(b-a),0,1)};
+  var ease = function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $('#yr').textContent = new Date().getFullYear();
+
+  var nav=$('#nav'), hero=$('#hero'), unit=$('#unit'), unitWrap=$('#unitWrap'), render=$('#render'), exploded=$('#exploded'), scan=$('#scan');
+  var caps=$$('.cap'), rows=$$('#schedule li'), meter=$('#meter'), pct=$('#pct'), hudPhase=$('#hudPhase');
+  var study=$('#approach'), steps=$$('.step'), tower=$('#tower'), towerFrame=$('#towerFrame'), rail=$$('#studyRail i'), towerZoom=$('#towerZoom');
+  var proc=$('#process'), track=$('#track'), phases=$$('.phase');
+  var band=$('.band'), bandImg=$('#bandImg');
+  var mani=$('#manifesto');
+  var mx=0,my=0,tx=0,ty=0;
+
+  // manifesto: split into words that light up with scroll
+  var KEY=['architect','structure:','planned','drawn','built','maintained'];
+  mani.innerHTML = mani.textContent.trim().split(/\s+/).map(function(w){
+    var k = KEY.indexOf(w.toLowerCase().replace(/[,.]/g,''))>-1 || KEY.indexOf(w.toLowerCase())>-1;
+    return '<span'+(k?' class="k"':'')+'>'+w+'</span>';
+  }).join(' ');
+  var words=$$('span',mani);
+
+  var TOWER=[ {s:1,x:0,y:0}, {s:2.1,x:0,y:34}, {s:1.9,x:2,y:2}, {s:1.9,x:-4,y:-24} ];
+  var PHASE=['Design','Build','Dissect'];
+  var lastStep=-1;
+
+  function progress(el){ var r=el.getBoundingClientRect(); var d=el.offsetHeight-innerHeight; return d>0?clamp(-r.top/d,0,1):0; }
+
+  function frame(){
+    var y=scrollY, vh=innerHeight, mobile=innerWidth<=900;
+    nav.classList.toggle('scrolled', y>30);
+
+    // ---- hero ----
+    var p=progress(hero);
+    var a=ease(seg(p,.10,.36)), b=ease(seg(p,.46,.70)), z=seg(p,.40,.94);
+    render.style.clipPath='inset(0 '+((1-a)*100).toFixed(2)+'% 0 0)';
+    scan.style.left=(a*100).toFixed(2)+'%';
+    scan.style.opacity=(a>0.002&&a<.998)?1:0;
+    exploded.style.opacity=b.toFixed(3);
+    tx+=(mx-tx)*.06; ty+=(my-ty)*.06;
+    var sc=1+a*.05+ease(z)*(mobile?.16:.26);
+    var ry=(reduce?0:(-7+p*14)+tx*4), rx=(reduce?0:(3-p*5)-ty*3);
+    unit.style.transform='rotateY('+ry.toFixed(2)+'deg) rotateX('+rx.toFixed(2)+'deg) scale('+sc.toFixed(4)+')';
+    if(!mobile) unitWrap.style.transform='translate('+(-ease(z)*5).toFixed(2)+'vw,-46%)';
+    else unitWrap.style.transform='';
+    var win=[[ -1,.11],[.16,.43],[.50,2]];
+    caps.forEach(function(c,i){
+      var inn=seg(p,win[i][0],win[i][0]+.05), out=1-seg(p,win[i][1],win[i][1]+.05), o=Math.min(inn,out);
+      c.style.opacity=o.toFixed(3);
+      var off=(1-inn)*30-(1-out)*30;
+      c.style.transform=(mobile?'translateY(':'translateY(calc(-50% + ')+off.toFixed(1)+'px)'+(mobile?'':')');
+      c.classList.toggle('on',o>.5);
+    });
+    var lit=Math.floor(seg(p,.56,.92)*rows.length+.001);
+    rows.forEach(function(r,i){r.classList.toggle('lit',i<lit)});
+    meter.style.transform='scaleX('+p.toFixed(3)+')';
+    pct.textContent=('00'+Math.round(p*100)).slice(-3)+'%';
+    hudPhase.innerHTML='Phase: <b>'+PHASE[p<.2?0:p<.5?1:2]+'</b>';
+
+    // ---- manifesto ----
+    var mr=mani.getBoundingClientRect();
+    var mp=clamp((vh*.85-mr.top)/(vh*.55+mr.height*.4),0,1), n=Math.round(mp*words.length);
+    words.forEach(function(w,i){w.classList.toggle('lit',i<n)});
+
+    // ---- study ----
+    var sp=progress(study), si=Math.min(steps.length-1,Math.floor(sp*steps.length*.999));
+    if(si!==lastStep){
+      lastStep=si;
+      steps.forEach(function(s,i){s.classList.toggle('on',i===si)});
+      rail.forEach(function(r,i){r.classList.toggle('on',i<=si)});
+      var t=TOWER[si];
+      tower.style.transform='translate('+t.x+'%,'+t.y+'%) scale('+t.s+')';
+      towerFrame.classList.toggle('zoom',si>0);
+      towerZoom.textContent=t.s.toFixed(1)+'x';
+    }
+
+    // ---- process ----
+    if(innerWidth>820){
+      var pp=progress(proc), max=track.scrollWidth-innerWidth+(parseFloat(getComputedStyle(track).paddingLeft)||40);
+      track.style.transform='translateX('+(-pp*Math.max(0,max)).toFixed(1)+'px)';
+      phases.forEach(function(ph,i){
+        var f=clamp(pp*phases.length*1.04-i,0,1);
+        $('i',ph).style.transform='scaleX('+f.toFixed(3)+')';
+        ph.classList.toggle('on',pp*phases.length*1.04>=i);
+      });
+    } else { phases.forEach(function(ph){ph.classList.add('on')}); }
+
+    // ---- band parallax ----
+    if(!reduce){ var br=band.getBoundingClientRect(); if(br.top<vh&&br.bottom>0){ bandImg.style.transform='translateY('+(((br.top+br.height/2)-vh/2)*-.09).toFixed(1)+'px)'; } }
+
+    requestAnimationFrame(frame);
+  }
+  addEventListener('mousemove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
+  requestAnimationFrame(frame);
+
+  // reveals + counters
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting) return; e.target.classList.add('in'); io.unobserve(e.target);
+    var c=e.target.querySelector('[data-count]'); if(c&&!reduce){
+      var end=parseFloat(c.dataset.count), dec=+c.dataset.dec||0, t0=performance.now();
+      (function tick(t){var k=clamp((t-t0)/1400,0,1); c.textContent=(end*(1-Math.pow(1-k,3))).toFixed(dec); if(k<1) requestAnimationFrame(tick)})(t0);
+    }
+  })},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  $$('.rv').forEach(function(el){io.observe(el)});
+
+  $$('[data-type]').forEach(function(a){a.addEventListener('click',function(){var sel=$('#f-type');[].forEach.call(sel.options,function(o){if(o.text===a.dataset.type) sel.value=o.value})})});
+
+  // bid form -> email draft
+  $('#bidForm').addEventListener('submit',function(e){
+    e.preventDefault(); var f=e.target, note=$('#formNote');
+    if(!f.name.value.trim()||!/^\S+@\S+\.\S+$/.test(f.email.value)){ note.textContent='Please add your name and a valid email so we can reply.'; note.style.color='var(--red)'; (f.name.value.trim()?f.email:f.name).focus(); return; }
+    var body=['Name: '+f.name.value,'Company: '+f.company.value,'Email: '+f.email.value,'Phone: '+f.phone.value,'Property: '+f.property.value,'Service: '+f.type.value,'',f.message.value].join('\n');
+    location.href='mailto:'+BID_EMAIL+'?subject='+encodeURIComponent('Quote request: '+f.type.value)+'&body='+encodeURIComponent(body);
+    note.style.color=''; note.textContent='Your email app should now be open with the request ready to send.';
+  });
+})();
+</script>
+<script src="a11y.js"></script>
+</body>
+</html>
