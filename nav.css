@@ -1,0 +1,53 @@
+/* Shared: services dropdown, mobile menu, linked service cards */
+.dd{position:relative}
+.dd-btn{font:inherit;font-size:14px;font-weight:500;color:inherit;background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:6px 0;white-space:nowrap}
+.dd-btn:hover,.dd.open .dd-btn{color:var(--ink)}
+.dd-btn svg{width:10px;height:10px;transition:transform .2s}
+.dd.open .dd-btn svg,.dd:hover .dd-btn svg{transform:rotate(180deg)}
+.dd-panel{position:absolute;top:calc(100% + 16px);left:-26px;width:620px;background:#fff;color:var(--ink);border:1px solid var(--ink);box-shadow:0 22px 60px rgba(6,26,48,.18);padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:2px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:60}
+.dd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.dd:hover .dd-panel,.dd:focus-within .dd-panel,.dd.open .dd-panel{opacity:1;visibility:visible;transform:none}
+.nav-links .dd-panel a{display:block;padding:12px 14px;white-space:normal;transition:background .15s}
+.nav-links .dd-panel a::after{display:none}
+.dd-panel a:hover{background:var(--wash)}
+.dd-panel a b{display:block;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:15px;letter-spacing:-.005em;color:var(--ink)}
+.dd-panel a:hover b{color:var(--blue)}
+.dd-panel a span{display:block;font-size:12.5px;line-height:1.4;color:var(--ink-3);margin-top:2px;font-weight:400}
+.nav-links .dd-panel a.dd-all{grid-column:1/-1;border-top:1px solid var(--line);margin-top:6px;padding-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+
+.menu-btn{display:none;width:42px;height:42px;border:1px solid var(--ink);background:#fff;cursor:pointer;place-items:center;padding:0;flex:none}
+.menu-btn i{display:block;width:18px;height:2px;background:var(--ink);box-shadow:0 6px 0 var(--ink),0 -6px 0 var(--ink)}
+.menu-btn[aria-expanded="true"] i{box-shadow:none;transform:rotate(45deg);position:relative}
+.menu-btn[aria-expanded="true"] i::after{content:"";position:absolute;inset:0;background:var(--ink);transform:rotate(90deg)}
+@media(max-width:1300px){.menu-btn{display:grid}}
+@media(max-width:560px){.nav .nav-cta{gap:8px}.menu-btn{width:38px;height:38px}}
+@media(max-width:400px){.nav-phone{padding:6px 8px!important}.nav-phone b{font-size:13px!important}.nav-phone small{letter-spacing:.08em!important}}
+
+.mnav{position:fixed;inset:0;z-index:49;background:#fff;overflow:auto;padding:96px var(--gutter) 40px;display:none}
+.mnav.open{display:block}
+.mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-stretch:112%;font-weight:700;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+.mnav h2{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:26px 0 4px}
+.mnav .sub a{font-size:17px;font-weight:600;padding:11px 0}
+.mnav a.cta{margin-top:26px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-align:center;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:16px}
+body.menu-open{overflow:hidden}
+
+/* whole card links to its service page */
+.speclist div{position:relative}
+.capcard h3 a::after,.speclist h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.speclist h3 a:hover{color:var(--blue)}
+.speclist h3 a::before{content:"\2192";float:right;color:var(--blue);font-weight:400;opacity:0;transform:translateX(-6px);transition:opacity .2s,transform .2s}
+.speclist div:hover h3 a::before{opacity:1;transform:none}
+
+/* phone header: stack the name so logo, phone and menu fit */
+@media(max-width:560px){.nav .brand{gap:10px}.nav .brand img{height:34px}.nav .brand b{max-width:84px;font-size:11.5px;letter-spacing:.06em;white-space:normal;line-height:1.15}}
+
+/* slow service-area banner */
+.areabar{background:var(--blue);color:#fff;height:34px;overflow:hidden;display:flex;align-items:center;position:relative;z-index:51}
+.areabar-track{display:flex;width:max-content;animation:areabar 70s linear infinite}
+.areabar:hover .areabar-track{animation-play-state:paused}
+.areabar-run{display:flex;flex:none}
+.areabar-run span{display:inline-flex;align-items:center;gap:22px;padding-left:22px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.areabar-run span::after{content:"";width:5px;height:5px;background:#fff;opacity:.7;transform:rotate(45deg);flex:none}
+@keyframes areabar{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.areabar-track{animation:none}}
+html.a11y-motion .areabar-track{animation:none!important}

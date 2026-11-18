@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reliable Breeze | Commercial Air Conditioning & Refrigeration</title>
-<meta name="description" content="Reliable Breeze designs, installs and maintains commercial and residential HVAC and refrigeration systems, with 24/7 emergency AC repair.">
+<title>Reliable Breeze | HVAC Company in Miami &amp; Fort Lauderdale | AC Repair &amp; Installation</title>
+<meta name="description" content="Reliable Breeze is a licensed HVAC company serving Miami, Fort Lauderdale and South Florida. Commercial and residential AC repair, AC installation, refrigeration and 24/7 emergency service. Call (954) 775-8248.">
+<meta property="og:title" content="Reliable Breeze | HVAC Company in Miami &amp; Fort Lauderdale | AC Repair &amp; Installation">
+<meta property="og:description" content="Reliable Breeze is a licensed HVAC company serving Miami, Fort Lauderdale and South Florida. Commercial and residential AC repair, AC installation, refrigeration and 24/7 emergency service. Call (954) 775-8248.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://siberianvito.github.io/reliable-breeze/assets/unit.jpg">
 <link rel="icon" href="assets/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,25 +57,25 @@ p{text-wrap:pretty}
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;height:76px;display:flex;align-items:center;transition:background .3s,box-shadow .3s,height .3s}
 .nav.scrolled{background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line);height:64px}
 .nav .wrap{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
+.nav .wrap{max-width:1680px;gap:clamp(28px,3vw,56px)}
 .brand img{height:42px;width:auto}
 .brand b{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:15px;letter-spacing:.1em;line-height:1.1;display:block}
 .brand b i{font-style:normal;color:var(--blue)}
-.brand small{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase;display:block;margin-top:3px}
-.nav-links{display:flex;gap:clamp(18px,2.4vw,34px);font-size:14px;font-weight:500;color:var(--ink-2)}
+.nav-links{display:flex;gap:clamp(20px,2.2vw,40px);font-size:14px;font-weight:500;color:var(--ink-2)}
 .nav-links a{position:relative;padding:6px 0;white-space:nowrap}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{transform:scaleX(1)}
 .nav .btn{height:42px;padding:0 20px;font-size:12px}
-.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-cta{display:flex;align-items:center;gap:22px;flex:none}
 .nav-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;white-space:nowrap}
 .nav-phone small{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
 .nav-phone b{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16px;letter-spacing:.01em}
 .nav-phone:hover b{color:var(--blue)}
 .live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(216,22,27,.5);animation:live 1.8s ease-out infinite;flex:none}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(216,22,27,.5)}100%{box-shadow:0 0 0 9px rgba(216,22,27,0)}}
-@media(max-width:1180px){.brand small{display:none}}
-@media(max-width:1100px){.nav-links{display:none}}
+@media(min-width:561px){.brand b{font-size:16px;white-space:nowrap}}
+@media(max-width:1300px){.nav-links{display:none}}
 @media(max-width:560px){.nav .nav-cta .btn{display:none}.nav-phone{border:1px solid var(--ink);padding:6px 12px;align-items:center}.nav-phone b{font-size:14px}}
 @media(max-width:520px){.brand img{height:34px}.brand{gap:10px}.brand b{font-size:11.5px;letter-spacing:.06em}.nav .btn{height:38px;padding:0 12px;font-size:10.5px;letter-spacing:.05em}}
 
@@ -129,6 +133,19 @@ p{text-wrap:pretty}
   .schedule li{padding:6px 0;font-size:13.5px}.schedule{margin-top:14px}
   .cap .cta{margin-top:20px}
 }
+
+/* residential: mirrored hero */
+.resi{height:400vh}
+@media(min-width:901px){
+  .resi .unit-wrap{right:auto;left:-7vw;width:min(70vw,1180px)}
+  .resi .hero-copy{left:auto;right:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));width:min(520px,42vw)}
+  .resi .copy-veil{inset:0 0 0 auto;background:linear-gradient(270deg,#fff 0,rgba(255,255,255,.94) 48%,rgba(255,255,255,0) 100%)}
+  .resi .grid-bg{-webkit-mask-image:radial-gradient(ellipse 85% 75% at 40% 50%,#000 30%,transparent 100%);mask-image:radial-gradient(ellipse 85% 75% at 40% 50%,#000 30%,transparent 100%)}
+  .resi .hud.tr{right:auto;left:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));text-align:left}
+}
+.resi .cap h2{font-size:clamp(36px,4.8vw,76px)}
+.resi .cap .cta{margin-top:24px}
+@media(max-width:900px){.resi{height:360vh}.resi .cap .cta{margin-top:14px}.resi .schedule li em{display:none}}
 
 /* ---------- STATS ---------- */
 .stats{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:#fff;position:relative;z-index:2}
@@ -342,19 +359,22 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
   .tower-frame img,.capcard img{transition:none}
 }
 </style>
+<link rel="stylesheet" href="nav.css?v=3">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "HVACBusiness", "@id": "https://siberianvito.github.io/reliable-breeze/#business", "name": "Reliable Breeze Air Conditioning & Refrigeration", "url": "https://siberianvito.github.io/reliable-breeze/", "telephone": "+1-954-775-8248", "email": "info@reliablebreeze.com", "image": "https://siberianvito.github.io/reliable-breeze/assets/logo-full.png", "address": {"@type": "PostalAddress", "streetAddress": "2501 Dykes Road, Suite 300 D", "addressLocality": "Miramar", "addressRegion": "FL", "postalCode": "33027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00"}], "areaServed": [{"@type": "City", "name": "Miami, FL"}, {"@type": "City", "name": "Miami Beach, FL"}, {"@type": "City", "name": "Coral Gables, FL"}, {"@type": "City", "name": "Doral, FL"}, {"@type": "City", "name": "Hialeah, FL"}, {"@type": "City", "name": "Kendall, FL"}, {"@type": "City", "name": "Aventura, FL"}, {"@type": "City", "name": "North Miami, FL"}, {"@type": "City", "name": "Fort Lauderdale, FL"}, {"@type": "City", "name": "Miramar, FL"}, {"@type": "City", "name": "Pembroke Pines, FL"}, {"@type": "City", "name": "Hollywood, FL"}, {"@type": "City", "name": "Davie, FL"}, {"@type": "City", "name": "Weston, FL"}, {"@type": "City", "name": "Plantation, FL"}, {"@type": "City", "name": "Pompano Beach, FL"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
+<div class="areabar" role="note" aria-label="Serving Miami-Dade County, Broward County, West Palm Beach and Monroe County"><div class="areabar-track"><div class="areabar-run"><span>Serving Miami-Dade County</span><span>Broward County</span><span>West Palm Beach</span><span>Monroe County</span><span>24/7 Emergency Service</span><span>Commercial &amp; Residential</span></div><div class="areabar-run" aria-hidden="true"><span>Serving Miami-Dade County</span><span>Broward County</span><span>West Palm Beach</span><span>Monroe County</span><span>24/7 Emergency Service</span><span>Commercial &amp; Residential</span></div></div></div>
 
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Reliable Breeze home">
       <img src="assets/logo-mark.png" alt="">
-      <span><b><span style="color:var(--red)">RELIABLE</span> <i>BREEZE</i></b><small>Air Conditioning &amp; Refrigeration</small></span>
+      <span><b><span style="color:var(--red)">RELIABLE</span> <i>BREEZE</i></b></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#approach">Approach</a>
-      <a href="#services">Services</a>
+      <div class="dd"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-services">Services <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3l4 4 4-4"/></svg></button><div class="dd-panel" id="dd-services"><a href="ac-repair.html"><b>AC Repair</b><span>Fast diagnosis and repair for homes and businesses</span></a><a href="emergency-ac-repair.html"><b>24/7 Emergency AC Repair</b><span>Day or night, commercial and residential</span></a><a href="ac-installation.html"><b>AC Installation</b><span>New units and replacements, 20% off installation</span></a><a href="ac-maintenance.html"><b>AC Maintenance</b><span>Tune-ups and planned maintenance agreements</span></a><a href="residential-ac.html"><b>Residential AC</b><span>Home cooling installed and serviced properly</span></a><a href="commercial-hvac.html"><b>Commercial HVAC</b><span>Design-build for offices, retail and facilities</span></a><a href="commercial-refrigeration.html"><b>Commercial Refrigeration</b><span>Walk-ins, cold storage and process cooling</span></a><a href="chillers-central-plants.html"><b>Chillers & Central Plants</b><span>Chilled water systems for large buildings</span></a><a href="indoor-air-quality.html"><b>Indoor Air Quality</b><span>Filtration, ventilation and humidity control</span></a><a class="dd-all" href="#services">All services</a></div></div>
       <a href="#emergency">24/7 Repair</a>
       <a href="#sectors">Sectors</a>
       <a href="#process">Process</a>
@@ -362,7 +382,7 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
     </nav>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:+19547758248" aria-label="Call our 24/7 emergency line, (954) 775-8248"><small><i class="live"></i>24/7 Emergency</small><b>(954) 775-8248</b></a>
-      <a class="btn" href="#contact">Request a quote</a>
+      <a class="btn" href="contact.html">Request a quote</a>
     </div>
   </div>
 </header>
@@ -385,11 +405,11 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
 
     <div class="hero-copy">
       <div class="cap" data-cap="0">
-        <span class="tag">Commercial &amp; residential HVAC / 24/7</span>
+        <span class="tag">HVAC company / Miami &amp; Fort Lauderdale</span>
         <h1>The architecture <span class="blue">of air.</span></h1>
         <p class="lede">Every great building has a second structure you never see. We design it, build it and keep it running around the clock, from commercial towers to the home you live in.</p>
         <div class="cta">
-          <a class="btn" href="#contact">Request a quote <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn" href="contact.html">Request a quote <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           <a class="btn ghost" href="#services">Services</a>
         </div>
       </div>
@@ -426,6 +446,54 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
     <div class="stat rv" style="--d:.08s"><div class="n"><span data-count="4.2" data-dec="1">4.2</span><sup>M</sup></div><p>Square feet of conditioned space delivered</p></div>
     <div class="stat rv" style="--d:.16s"><div class="n"><span data-count="600">600</span><sup>+</sup></div><p>Commercial projects completed</p></div>
     <div class="stat rv" style="--d:.24s"><div class="n">24<sup>/7</sup></div><p>Emergency AC repair, commercial and residential</p></div>
+  </div>
+</section>
+
+<!-- ================= RESIDENTIAL: blueprint, built, dissected (mirrored) ================= -->
+<section class="hero resi" id="residential" aria-label="Residential air conditioning">
+  <div class="stage">
+    <div class="unit-wrap" id="rUnitWrap">
+      <div class="unit" id="rUnit">
+        <img class="blueprint" src="assets/res-blueprint.jpg" alt="Blueprint line drawing of a residential outdoor air conditioner condenser" loading="lazy">
+        <img class="render" id="rRender" src="assets/res-unit.jpg" alt="" loading="lazy">
+        <img class="exploded" id="rExploded" src="assets/res-exploded.jpg" alt="" loading="lazy">
+        <div class="scan" id="rScan"></div>
+      </div>
+    </div>
+    <div class="grid-bg"></div>
+    <div class="copy-veil"></div>
+
+    <div class="hero-copy">
+      <div class="cap" data-cap="0">
+        <span class="tag">Residential air conditioning</span>
+        <h2>The same science, <span class="blue">at home.</span></h2>
+        <p class="lede">The unit beside your house is a small version of the machines we put on towers. We bring the same engineering to it: sized for your home, installed cleanly, and serviced by people who understand how it works.</p>
+      </div>
+      <div class="cap" data-cap="1">
+        <span class="tag">01 / Sized, not guessed</span>
+        <h2>Measured for <span class="blue">your home.</span></h2>
+        <p class="lede">We calculate the load room by room before recommending a system. The right size cools evenly, runs quieter, lasts longer and costs less to run.</p>
+      </div>
+      <div class="cap" data-cap="2">
+        <span class="tag">02 / Known inside out</span>
+        <h2>Every part, <span class="blue">understood.</span></h2>
+        <ul class="schedule" id="rSchedule">
+          <li><span>R1</span>Condenser fan &amp; motor<em>Heat rejection</em></li>
+          <li><span>R2</span>Condenser coil<em>Heat transfer</em></li>
+          <li><span>R3</span>Compressor<em>Refrigeration</em></li>
+          <li><span>R4</span>Capacitor &amp; contactor<em>Start &amp; run</em></li>
+          <li><span>R5</span>Refrigerant line set<em>Circulation</em></li>
+          <li><span>R6</span>Thermostat &amp; controls<em>Comfort</em></li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="contact.html?need=install&amp;property=home">20% off installation <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="btn ghost" href="tel:+19547758248">Call (954) 775-8248</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hud tr">Sheet <b>R-001</b><br>Residential condenser<br>Isometric / not to scale<br><span id="rHudPhase">Phase: <b>Design</b></span></div>
+    <div class="hud br"><span>Dissection</span><span class="meter"><i id="rMeter"></i></span><b id="rPct">000%</b></div>
   </div>
 </section>
 
@@ -487,18 +555,18 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
       <p class="lede rv">One accountable team for design, installation, maintenance and 24/7 repair, on commercial buildings and in homes. Self-performed by our own engineers and technicians.</p>
     </div>
     <div class="caps">
-      <article class="capcard rv"><img src="assets/ducts.jpg" alt="Exposed ductwork in a commercial office floor" loading="lazy"><span class="idx">SV-01</span><div class="body"><h3>Commercial HVAC design-build</h3><p>New construction and tenant improvements, engineered and installed under one contract.</p><ul><li>VRF</li><li>VAV</li><li>Rooftop units</li><li>DOAS</li></ul></div></article>
-      <article class="capcard rv" style="--d:.1s"><img src="assets/plant.jpg" alt="Central plant with chillers and chilled water piping" loading="lazy"><span class="idx">SV-02</span><div class="body"><h3>Central plants &amp; chillers</h3><p>Chilled water systems, towers, pumps and piping for large-load buildings.</p><ul><li>Chillers</li><li>Cooling towers</li><li>Hydronics</li></ul></div></article>
-      <article class="capcard rv"><img src="assets/cold.jpg" alt="Industrial cold storage facility with ceiling evaporators" loading="lazy"><span class="idx">SV-03</span><div class="body"><h3>Commercial refrigeration</h3><p>Cold storage, walk-ins and process cooling held to temperature around the clock.</p><ul><li>Cold storage</li><li>Rack systems</li><li>Process cooling</li></ul></div></article>
-      <article class="capcard rv" style="--d:.1s"><img src="assets/rooftop.jpg" alt="Rooftop of a commercial building with rows of mechanical units" loading="lazy"><span class="idx">SV-04</span><div class="body"><h3>Retrofits &amp; energy upgrades</h3><p>Equipment replacement in occupied buildings, phased so your tenants never lose cooling.</p><ul><li>Replacements</li><li>Controls upgrades</li><li>Efficiency</li></ul></div></article>
+      <article class="capcard rv"><img src="assets/ducts.jpg" alt="Exposed ductwork in a commercial office floor" loading="lazy"><span class="idx">SV-01</span><div class="body"><h3><a href="commercial-hvac.html">Commercial HVAC design-build</a></h3><p>New construction and tenant improvements, engineered and installed under one contract.</p><ul><li>VRF</li><li>VAV</li><li>Rooftop units</li><li>DOAS</li></ul></div></article>
+      <article class="capcard rv" style="--d:.1s"><img src="assets/plant.jpg" alt="Central plant with chillers and chilled water piping" loading="lazy"><span class="idx">SV-02</span><div class="body"><h3><a href="chillers-central-plants.html">Central plants &amp; chillers</a></h3><p>Chilled water systems, towers, pumps and piping for large-load buildings.</p><ul><li>Chillers</li><li>Cooling towers</li><li>Hydronics</li></ul></div></article>
+      <article class="capcard rv"><img src="assets/cold.jpg" alt="Industrial cold storage facility with ceiling evaporators" loading="lazy"><span class="idx">SV-03</span><div class="body"><h3><a href="commercial-refrigeration.html">Commercial refrigeration</a></h3><p>Cold storage, walk-ins and process cooling held to temperature around the clock.</p><ul><li>Cold storage</li><li>Rack systems</li><li>Process cooling</li></ul></div></article>
+      <article class="capcard rv" style="--d:.1s"><img src="assets/rooftop.jpg" alt="Rooftop of a commercial building with rows of mechanical units" loading="lazy"><span class="idx">SV-04</span><div class="body"><h3><a href="ac-installation.html">Retrofits &amp; energy upgrades</a></h3><p>Equipment replacement in occupied buildings, phased so your tenants never lose cooling.</p><ul><li>Replacements</li><li>Controls upgrades</li><li>Efficiency</li></ul></div></article>
     </div>
     <div class="speclist">
-      <div class="rv"><span class="mono" style="color:var(--red)">SV-05 / 24/7</span><h3>Emergency AC repair</h3><p>Day or night response for commercial buildings and homes, by technicians who know the equipment inside out.</p></div>
-      <div class="rv" style="--d:.08s"><span class="mono">SV-06</span><h3>New AC installation</h3><p>New units and full system replacements, sized correctly and installed with warranty. Now 20% off installation.</p></div>
-      <div class="rv" style="--d:.16s"><span class="mono">SV-07</span><h3>Residential air conditioning</h3><p>Home comfort systems installed, serviced and repaired to the same standard as our commercial work.</p></div>
-      <div class="rv"><span class="mono">SV-08</span><h3>Planned maintenance</h3><p>Service agreements with scheduled inspections, documented reports and budget forecasting.</p></div>
-      <div class="rv" style="--d:.08s"><span class="mono">SV-09</span><h3>Building automation</h3><p>Controls integration, monitoring and trend data that show how the building is performing.</p></div>
-      <div class="rv" style="--d:.16s"><span class="mono">SV-10</span><h3>Indoor air quality</h3><p>Filtration, ventilation and humidity control for healthier offices, facilities and homes.</p></div>
+      <div class="rv"><span class="mono" style="color:var(--red)">SV-05 / 24/7</span><h3><a href="emergency-ac-repair.html">Emergency AC repair</a></h3><p>Day or night response for commercial buildings and homes, by technicians who know the equipment inside out.</p></div>
+      <div class="rv" style="--d:.08s"><span class="mono">SV-06</span><h3><a href="ac-installation.html">New AC installation</a></h3><p>New units and full system replacements, sized correctly and installed with warranty. Now 20% off installation.</p></div>
+      <div class="rv" style="--d:.16s"><span class="mono">SV-07</span><h3><a href="residential-ac.html">Residential air conditioning</a></h3><p>Home comfort systems installed, serviced and repaired to the same standard as our commercial work.</p></div>
+      <div class="rv"><span class="mono">SV-08</span><h3><a href="ac-maintenance.html">Planned maintenance</a></h3><p>Service agreements with scheduled inspections, documented reports and budget forecasting.</p></div>
+      <div class="rv" style="--d:.08s"><span class="mono">SV-09</span><h3><a href="commercial-hvac.html">Building automation</a></h3><p>Controls integration, monitoring and trend data that show how the building is performing.</p></div>
+      <div class="rv" style="--d:.16s"><span class="mono">SV-10</span><h3><a href="indoor-air-quality.html">Indoor air quality</a></h3><p>Filtration, ventilation and humidity control for healthier offices, facilities and homes.</p></div>
     </div>
   </div>
 </section>
@@ -516,13 +584,13 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
       </div>
       <div class="em-cols">
         <div class="em-card rv"><span class="mono">Response 01</span><h3>Commercial emergency service</h3><ul><li>Rooftop units, chillers and split systems</li><li>Refrigeration and cold storage failures</li><li>Priority dispatch for critical facilities</li><li>Diagnosis documented for your records</li></ul></div>
-        <div class="em-card rv" style="--d:.1s"><img class="em-photo" src="assets/residential-tech.jpg" alt="Reliable Breeze technician in a hard hat checking refrigerant pressures on an outdoor AC unit" loading="lazy" onerror="this.remove()"><span class="mono">Response 02</span><h3>Residential AC repair</h3><ul><li>No cooling, weak airflow, leaks and noise</li><li>All major brands and system types</li><li>Clear pricing before any work begins</li><li>Repair or replace, advised honestly</li></ul></div>
+        <div class="em-card rv" style="--d:.1s"><img class="em-photo" src="assets/residential-tech.jpg" alt="Reliable Breeze technician in a hard hat checking refrigerant pressures on an outdoor AC unit" loading="lazy" onerror="this.remove()"><span class="mono">Response 02</span><h3><a href="ac-repair.html" style="text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px">Residential AC repair</a></h3><ul><li>No cooling, weak airflow, leaks and noise</li><li>All major brands and system types</li><li>Clear pricing before any work begins</li><li>Repair or replace, advised honestly</li></ul></div>
       </div>
     </div>
     <div class="offer rv" id="offer">
       <div class="pct" aria-hidden="true">20<sup>% OFF</sup></div>
       <div><span class="mono">Current offer / new AC units</span><h3>20% off installation on new AC units.</h3><p>Commercial or residential. Every new system is sized by our engineers, installed by our own crews and backed by warranty.</p></div>
-      <div><a class="btn" href="#contact" data-type="New AC unit installation (20% off)">Claim 20% off <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><span class="mono fine">Terms apply. Ask for offer and warranty details.</span></div>
+      <div><a class="btn" href="contact.html?need=install">Claim 20% off <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><span class="mono fine">Terms apply. Ask for offer and warranty details.</span></div>
     </div>
   </div>
 </section>
@@ -535,13 +603,13 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
       <p class="lede rv">We work with owners, general contractors, developers, property managers and homeowners.</p>
     </div>
     <div class="sector-list">
-      <a class="sector rv" href="#contact"><span class="mono">S-01</span><h3>Office &amp; high-rise</h3><p>Core and shell, tenant fit-outs, central plant replacement.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-02</span><h3>Healthcare &amp; labs</h3><p>Pressurization, filtration and redundancy for regulated spaces.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-03</span><h3>Hospitality &amp; multifamily</h3><p>Quiet, efficient systems across hundreds of occupied rooms.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-04</span><h3>Retail &amp; mixed-use</h3><p>Multi-site programs and landlord work delivered on rollout schedules.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-05</span><h3>Industrial &amp; cold chain</h3><p>Warehousing, food distribution and process refrigeration.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-06</span><h3>Education &amp; public</h3><p>Schools, civic buildings and campuses with long service lives.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="sector rv" href="#contact"><span class="mono">S-07</span><h3>Residential</h3><p>New AC installation, replacement, maintenance and 24/7 repair for homes.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-01</span><h3>Office &amp; high-rise</h3><p>Core and shell, tenant fit-outs, central plant replacement.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-02</span><h3>Healthcare &amp; labs</h3><p>Pressurization, filtration and redundancy for regulated spaces.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-03</span><h3>Hospitality &amp; multifamily</h3><p>Quiet, efficient systems across hundreds of occupied rooms.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-04</span><h3>Retail &amp; mixed-use</h3><p>Multi-site programs and landlord work delivered on rollout schedules.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-05</span><h3>Industrial &amp; cold chain</h3><p>Warehousing, food distribution and process refrigeration.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=commercial"><span class="mono">S-06</span><h3>Education &amp; public</h3><p>Schools, civic buildings and campuses with long service lives.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="sector rv" href="contact.html?property=home"><span class="mono">S-07</span><h3>Residential</h3><p>New AC installation, replacement, maintenance and 24/7 repair for homes.</p><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
     </div>
   </div>
 </section>
@@ -644,7 +712,7 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
   <div class="wrap">
     <div class="foot">
       <div><img src="assets/logo-full.png" alt="Reliable Breeze Air Conditioning &amp; Refrigeration"></div>
-      <div><h4>Services</h4><a href="#services">HVAC design-build</a><a href="#emergency">24/7 emergency repair</a><a href="#offer">New AC installation</a><a href="#services">Residential AC</a><a href="#services">Refrigeration</a></div>
+      <div><h4>Services</h4><a href="ac-repair.html">AC repair</a><a href="emergency-ac-repair.html">24/7 emergency AC repair</a><a href="ac-installation.html">AC installation</a><a href="ac-maintenance.html">AC maintenance</a><a href="residential-ac.html">Residential AC</a><a href="commercial-hvac.html">Commercial HVAC</a><a href="commercial-refrigeration.html">Commercial refrigeration</a><a href="chillers-central-plants.html">Chillers &amp; central plants</a><a href="indoor-air-quality.html">Indoor air quality</a></div>
       <div><h4>Company</h4><a href="#approach">Approach</a><a href="#sectors">Sectors</a><a href="#process">Process</a><a href="#partner">Why us</a></div>
       <div><h4>Contact</h4><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a><a href="tel:+19547758248">(954) 775-8248</a><p>2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</p><p>License CAC057175</p></div>
     </div>
@@ -663,11 +731,24 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
   $('#yr').textContent = new Date().getFullYear();
 
   var nav=$('#nav'), hero=$('#hero'), unit=$('#unit'), unitWrap=$('#unitWrap'), render=$('#render'), exploded=$('#exploded'), scan=$('#scan');
-  var caps=$$('.cap'), rows=$$('#schedule li'), meter=$('#meter'), pct=$('#pct'), hudPhase=$('#hudPhase');
+  var caps=$$('.cap',hero), rows=$$('#schedule li'), meter=$('#meter'), pct=$('#pct'), hudPhase=$('#hudPhase');
   var study=$('#approach'), steps=$$('.step'), tower=$('#tower'), towerFrame=$('#towerFrame'), rail=$$('#studyRail i'), towerZoom=$('#towerZoom');
   var proc=$('#process'), track=$('#track'), phases=$$('.phase');
   var band=$('.band'), bandImg=$('#bandImg');
   var mani=$('#manifesto');
+  var resi=$('#residential'), rUnit=$('#rUnit'), rUnitWrap=$('#rUnitWrap'), rRender=$('#rRender'), rExploded=$('#rExploded'), rScan=$('#rScan');
+  var rCaps=$$('.cap',resi), rRows=$$('#rSchedule li'), rMeter=$('#rMeter'), rPct=$('#rPct'), rHudPhase=$('#rHudPhase');
+  var CAPWIN=[[ -1,.11],[.16,.43],[.50,2]];
+  function setCaps(list,p,mobile){
+    list.forEach(function(c,i){
+      var inn=seg(p,CAPWIN[i][0],CAPWIN[i][0]+.05), out=1-seg(p,CAPWIN[i][1],CAPWIN[i][1]+.05), o=Math.min(inn,out);
+      c.style.opacity=o.toFixed(3);
+      var off=(1-inn)*30-(1-out)*30;
+      c.style.transform=mobile?'translateY('+off.toFixed(1)+'px)':'translateY(calc(-50% + '+off.toFixed(1)+'px))';
+      c.classList.toggle('on',o>.5);
+    });
+  }
+  var areabar=$('.areabar');
   var mx=0,my=0,tx=0,ty=0;
 
   // manifesto: split into words that light up with scroll
@@ -687,6 +768,7 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
   function frame(){
     var y=scrollY, vh=innerHeight, mobile=innerWidth<=900;
     nav.classList.toggle('scrolled', y>30);
+    nav.style.top=Math.max(0,(areabar?areabar.offsetHeight:0)-y)+'px';
 
     // ---- hero ----
     var p=progress(hero);
@@ -701,19 +783,34 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
     unit.style.transform='rotateY('+ry.toFixed(2)+'deg) rotateX('+rx.toFixed(2)+'deg) scale('+sc.toFixed(4)+')';
     if(!mobile) unitWrap.style.transform='translate('+(-ease(z)*5).toFixed(2)+'vw,-46%)';
     else unitWrap.style.transform='';
-    var win=[[ -1,.11],[.16,.43],[.50,2]];
-    caps.forEach(function(c,i){
-      var inn=seg(p,win[i][0],win[i][0]+.05), out=1-seg(p,win[i][1],win[i][1]+.05), o=Math.min(inn,out);
-      c.style.opacity=o.toFixed(3);
-      var off=(1-inn)*30-(1-out)*30;
-      c.style.transform=(mobile?'translateY(':'translateY(calc(-50% + ')+off.toFixed(1)+'px)'+(mobile?'':')');
-      c.classList.toggle('on',o>.5);
-    });
+    setCaps(caps,p,mobile);
     var lit=Math.floor(seg(p,.56,.92)*rows.length+.001);
     rows.forEach(function(r,i){r.classList.toggle('lit',i<lit)});
     meter.style.transform='scaleX('+p.toFixed(3)+')';
     pct.textContent=('00'+Math.round(p*100)).slice(-3)+'%';
     hudPhase.innerHTML='Phase: <b>'+PHASE[p<.2?0:p<.5?1:2]+'</b>';
+
+    // ---- residential (mirrored: slides in from the left) ----
+    var q=progress(resi), rr=resi.getBoundingClientRect();
+    if(rr.top<vh*1.2 && rr.bottom>-vh*.2){
+      var ent=reduce?1:ease(clamp((vh-rr.top)/(vh*.95),0,1));
+      var ra=ease(seg(q,.10,.36)), rb=ease(seg(q,.46,.70)), rz=seg(q,.40,.94);
+      rRender.style.clipPath='inset(0 0 0 '+((1-ra)*100).toFixed(2)+'%)';
+      rScan.style.left=((1-ra)*100).toFixed(2)+'%';
+      rScan.style.opacity=(ra>0.002&&ra<.998)?1:0;
+      rExploded.style.opacity=rb.toFixed(3);
+      var rsc=1+ra*.05+ease(rz)*(mobile?.14:.22);
+      var rry=(reduce?0:(7-q*14)+tx*4), rrx=(reduce?0:(3-q*5)-ty*3);
+      rUnit.style.transform='rotateY('+rry.toFixed(2)+'deg) rotateX('+rrx.toFixed(2)+'deg) scale('+rsc.toFixed(4)+')';
+      rUnitWrap.style.transform=mobile?'translate(calc(-50% - '+((1-ent)*110).toFixed(2)+'vw),-50%)':'translate('+(-(1-ent)*75+ease(rz)*4).toFixed(2)+'vw,-46%)';
+      rUnitWrap.style.opacity=(.15+ent*.85).toFixed(3);
+      setCaps(rCaps,q,mobile);
+      var rlit=Math.floor(seg(q,.56,.92)*rRows.length+.001);
+      rRows.forEach(function(r,i){r.classList.toggle('lit',i<rlit)});
+      rMeter.style.transform='scaleX('+q.toFixed(3)+')';
+      rPct.textContent=('00'+Math.round(q*100)).slice(-3)+'%';
+      rHudPhase.innerHTML='Phase: <b>'+PHASE[q<.2?0:q<.5?1:2]+'</b>';
+    }
 
     // ---- manifesto ----
     var mr=mani.getBoundingClientRect();
@@ -773,6 +870,7 @@ footer{padding:64px 0 34px;border-top:1px solid var(--line)}
   });
 })();
 </script>
+<script src="nav.js?v=3"></script>
 <script src="a11y.js"></script>
 </body>
 </html>

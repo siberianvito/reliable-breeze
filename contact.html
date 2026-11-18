@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Quote | Reliable Breeze</title>
+<meta name="description" content="Tell Reliable Breeze about your project or repair. Commercial and residential HVAC in South Florida, with 24/7 emergency service.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1826; --ink-2:#44566a; --ink-3:#66778a;
+  --line:#dfe6ed; --line-2:#eef2f6; --wash:#f6f9fc;
+  --blue:#0a6fc2; --blue-soft:#e8f2fb; --red:#d8161b; --ok:#0d7a4f;
+  --display:"Archivo",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --gutter:clamp(20px,4vw,64px); --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);font-stretch:118%;font-weight:700;letter-spacing:-.02em;line-height:1.03;text-wrap:balance}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:2000}
+.skip:focus{left:12px;top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.tag{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.tag::before{content:"";width:28px;height:1px;background:var(--blue)}
+.blue{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:54px;padding:0 28px;font-family:var(--display);font-stretch:112%;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;white-space:nowrap;transition:background .25s,border-color .25s,color .25s}
+.btn:hover{background:var(--blue);border-color:var(--blue)}
+.btn svg{width:16px;height:16px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);animation:live 1.8s ease-out infinite;flex:none}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(216,22,27,.5)}100%{box-shadow:0 0 0 9px rgba(216,22,27,0)}}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{max-width:1680px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
+.brand img{height:42px;width:auto}
+.brand b{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:16px;letter-spacing:.1em;white-space:nowrap}
+.brand b i{font-style:normal;color:var(--blue)}
+.top-cta{display:flex;align-items:center;gap:22px}
+.nav-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;white-space:nowrap}
+.nav-phone small{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.nav-phone b{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16px}
+.back{font-family:var(--display);font-stretch:112%;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);padding:11px 16px;white-space:nowrap}
+.back:hover{background:var(--ink);color:#fff}
+@media(max-width:620px){.back{display:none}.brand{gap:10px}.brand b{display:block;max-width:84px;font-size:11.5px;letter-spacing:.06em;white-space:normal;line-height:1.15}.brand img{height:34px}.nav-phone{border:1px solid var(--ink);padding:6px 12px;align-items:center}.nav-phone b{font-size:14px}}
+
+/* intro */
+.intro{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.intro::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px),linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:24px 24px,24px 24px,120px 120px,120px 120px;opacity:.7;-webkit-mask-image:linear-gradient(100deg,transparent 30%,#000);mask-image:linear-gradient(100deg,transparent 30%,#000)}
+.intro .wrap{position:relative;padding-top:clamp(48px,7vw,104px);padding-bottom:clamp(40px,5vw,72px);display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
+.intro h1{font-size:clamp(40px,6.4vw,96px);margin-top:22px}
+.intro p{color:var(--ink-2);font-size:clamp(17px,1.35vw,20px);max-width:44ch}
+@media(max-width:860px){.intro .wrap{grid-template-columns:1fr}}
+
+/* builder */
+.builder{padding:clamp(40px,6vw,88px) 0 clamp(60px,8vw,120px)}
+.builder .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+@media(max-width:960px){.builder .wrap{grid-template-columns:1fr}}
+fieldset{border:0;padding:0 0 38px 54px;position:relative;min-width:0}
+fieldset::before{content:"";position:absolute;left:17px;top:38px;bottom:0;width:1px;background:var(--line)}
+fieldset:last-of-type::before{display:none}
+.num{position:absolute;left:0;top:0;width:35px;height:35px;border:1px solid var(--ink-3);border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-3);background:#fff;transition:background .3s,border-color .3s,color .3s}
+fieldset.done .num{background:var(--blue);border-color:var(--blue);color:#fff}
+fieldset.done::before{background:var(--blue)}
+legend{float:left;width:100%;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.01em;line-height:1.15;padding:2px 0 6px}
+legend+*{clear:both}
+.hint{font-size:14.5px;color:var(--ink-3);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.chip span{display:flex;flex-direction:column;gap:2px;min-height:52px;justify-content:center;padding:10px 18px;border:1px solid #b9c5d1;background:#fff;font-weight:500;font-size:15.5px;transition:border-color .2s,background .2s,color .2s,transform .2s}
+.chip small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400}
+.chip:hover span{border-color:var(--ink)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:checked+span small{color:#9fc9f2}
+.chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:3px}
+.chip.big span{min-width:210px;min-height:84px;padding:14px 22px;font-family:var(--display);font-stretch:112%;font-size:19px;font-weight:700}
+.chip.urgent input:checked+span{background:var(--red);border-color:var(--red)}
+.chip.urgent input:checked+span small{color:#ffd9da}
+.callnow{display:none;margin-top:16px;border:1px solid var(--red);border-left-width:4px;padding:16px 20px;background:#fff;align-items:center;gap:18px;flex-wrap:wrap}
+.callnow.show{display:flex}
+.callnow b{font-family:var(--display);font-stretch:112%;font-size:22px}
+.callnow p{font-size:14.5px;color:var(--ink-2);flex:1;min-width:200px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
+.fields .full{grid-column:1/-1}
+label.l{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:0;border-bottom:1px solid #b9c5d1;padding:10px 0;border-radius:0;transition:border-color .2s}
+input:focus,textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 1px 0 var(--blue)}
+textarea{resize:vertical;min-height:84px}
+@media(max-width:560px){.fields{grid-template-columns:1fr}fieldset{padding-left:46px}.chip.big span{min-width:0}}
+.send{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+.note{font-size:13.5px;color:var(--ink-3);max-width:44ch}
+.note a{text-decoration:underline}
+.note.err{color:var(--red)}
+
+.simple{display:grid;grid-template-columns:1fr 1fr;gap:24px 26px;border:1px solid var(--line);padding:clamp(22px,3.4vw,44px);background:#fff}
+.simple .full{grid-column:1/-1}
+.simple .send{margin-top:6px}
+select{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:0;border-bottom:1px solid #b9c5d1;padding:10px 0;border-radius:0}
+select:focus{outline:0;border-color:var(--blue);box-shadow:0 1px 0 var(--blue)}
+.simple textarea{min-height:120px}
+.rows dd a:hover{color:var(--blue)}
+@media(max-width:560px){.simple{grid-template-columns:1fr}}
+
+/* ticket */
+.ticket{position:sticky;top:96px;border:1px solid var(--ink);background:#fff}
+.ticket-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--ink);background:var(--ink);color:#fff}
+.ticket-head .mono{color:#9fb3c6}
+.ticket-head b{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em}
+.ticket-title{padding:22px 20px 18px;border-bottom:1px solid var(--line)}
+.ticket-title h2{font-size:26px;margin-top:8px}
+.bar{height:3px;background:var(--line-2);position:relative}
+.bar i{position:absolute;inset:0;background:var(--blue);transform-origin:left;transform:scaleX(0);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.rows div{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:13px 20px;border-bottom:1px solid var(--line);font-size:15px;align-items:baseline}
+.rows dd{color:var(--ink-3);overflow-wrap:anywhere;transition:color .3s}
+.rows dd.set{color:var(--ink);font-weight:500}
+.status{display:flex;align-items:center;gap:10px;padding:16px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.status i{width:9px;height:9px;border-radius:50%;background:#b9c5d1;flex:none;transition:background .3s}
+.status.ready{color:var(--ok)}.status.ready i{background:var(--ok)}
+.stamp{margin:0 20px 20px;padding:14px 16px;background:var(--wash);border:1px dashed #b9c5d1;font-size:13.5px;color:var(--ink-2)}
+.stamp b{color:var(--ink)}
+@media(max-width:960px){.ticket{position:static}}
+
+/* promises */
+.promises{background:var(--ink);color:#fff;padding:clamp(64px,9vw,130px) 0}
+.promises .tag{color:#6cb6f5}.promises .tag::before{background:#6cb6f5}
+.promises h2{font-size:clamp(32px,4.6vw,66px);margin:22px 0 clamp(36px,5vw,64px);max-width:18ch}
+.p-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}
+.p-grid div{padding:28px 28px 8px 0}
+.p-grid div+div{padding-left:28px;border-left:1px solid rgba(255,255,255,.16)}
+.p-grid .mono{color:#6cb6f5}
+.p-grid h3{font-size:22px;margin:14px 0 10px}
+.p-grid p{font-size:15px;color:#a9b9c9}
+@media(max-width:820px){.p-grid{grid-template-columns:1fr}.p-grid div+div{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.16)}}
+.facts{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16)}
+.facts div{background:var(--ink);padding:20px 22px}
+.facts .mono{color:#7f93a6;display:block;margin-bottom:8px}
+.facts b{font-family:var(--display);font-stretch:112%;font-weight:600;font-size:17px;line-height:1.3;display:block}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr}}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-top:22px;padding-bottom:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink-2);margin-left:18px}
+footer a:first-of-type{margin-left:0}
+footer a:hover{color:var(--blue)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+<link rel="stylesheet" href="nav.css?v=3">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="areabar" role="note" aria-label="Serving Miami-Dade County, Broward County, West Palm Beach and Monroe County"><div class="areabar-track"><div class="areabar-run"><span>Serving Miami-Dade County</span><span>Broward County</span><span>West Palm Beach</span><span>Monroe County</span><span>24/7 Emergency Service</span><span>Commercial &amp; Residential</span></div><div class="areabar-run" aria-hidden="true"><span>Serving Miami-Dade County</span><span>Broward County</span><span>West Palm Beach</span><span>Monroe County</span><span>24/7 Emergency Service</span><span>Commercial &amp; Residential</span></div></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Reliable Breeze home"><img src="assets/logo-mark.png" alt=""><b><span style="color:var(--red)">RELIABLE</span> <i>BREEZE</i></b></a>
+    <div class="top-cta">
+      <a class="nav-phone" href="tel:+19547758248" aria-label="Call our 24/7 emergency line, (954) 775-8248"><small><i class="live"></i>24/7 Emergency</small><b>(954) 775-8248</b></a>
+      <a class="back" href="index.html">Back to site</a>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+<section class="intro">
+  <div class="wrap">
+    <div>
+      <span class="tag">Request a quote</span>
+      <h1>The last HVAC company <span class="blue">you'll need to find.</span></h1>
+    </div>
+    <p>Tell us what you need and we will get back to you within one business day. A real person at our Miramar office reads every message.</p>
+  </div>
+</section>
+
+<section class="builder">
+  <div class="wrap">
+    <form id="quote" class="simple" novalidate>
+      <div><label class="l" for="q-name">Name</label><input type="text" id="q-name" name="name" autocomplete="name" required></div>
+      <div><label class="l" for="q-phone">Phone</label><input type="tel" id="q-phone" name="phone" autocomplete="tel"></div>
+      <div class="full"><label class="l" for="q-email">Email</label><input type="email" id="q-email" name="email" autocomplete="email" required></div>
+      <div><label class="l" for="q-prop">Property</label>
+        <select id="q-prop" name="property"><option>Commercial</option><option>Residential</option></select></div>
+      <div><label class="l" for="q-need">Service</label>
+        <select id="q-need" name="need">
+          <option data-key="install">New AC installation (20% off)</option>
+          <option data-key="project">New construction / large project</option>
+          <option data-key="replace">Replacement / upgrade</option>
+          <option data-key="repair">AC repair</option>
+          <option data-key="maintenance">Maintenance plan</option>
+          <option data-key="refrigeration">Commercial refrigeration</option>
+          <option data-key="other">Something else</option>
+        </select></div>
+      <div class="full"><label class="l" for="q-msg">Message</label><textarea id="q-msg" name="message" placeholder="How can we help?"></textarea></div>
+      <div class="full send">
+        <button class="btn" type="submit">Send request <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+        <p class="note" id="note" role="status">Opens your email app with the request filled in. By sending, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+    </form>
+
+    <aside class="ticket" aria-label="Contact details">
+      <div class="ticket-head"><b>REACH US DIRECTLY</b><span class="mono"><i class="live" style="margin-right:8px"></i>24/7</span></div>
+      <dl class="rows">
+        <div><dt class="mono">Call</dt><dd class="set"><a href="tel:+19547758248">(954) 775-8248</a></dd></div>
+        <div><dt class="mono">Email</dt><dd class="set"><a href="mailto:info@reliablebreeze.com">info@reliablebreeze.com</a></dd></div>
+        <div><dt class="mono">Office</dt><dd class="set">2501 Dykes Road, Suite 300 D<br>Miramar, FL 33027</dd></div>
+        <div><dt class="mono">Hours</dt><dd class="set">Mon to Fri, 9am to 5pm<br>Saturday, 10am to 2pm<br>Sunday, closed</dd></div>
+        <div><dt class="mono">License</dt><dd class="set">CAC057175</dd></div>
+      </dl>
+      <p class="stamp"><b>Emergency?</b> Call instead of writing. The line is answered 24 hours a day, 7 days a week.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="promises">
+  <div class="wrap">
+    <span class="tag">What you can hold us to</span>
+    <h2>Easy to promise. We'd rather be easy to check.</h2>
+    <div class="p-grid">
+      <div><span class="mono">Commitment 01</span><h3>You'll know the price first.</h3><p>A written scope and number before any work begins. If something changes on site, we stop and ask.</p></div>
+      <div><span class="mono">Commitment 02</span><h3>The people who quote it, build it.</h3><p>Our own engineers and technicians, from the first visit to the service call years later.</p></div>
+      <div><span class="mono">Commitment 03</span><h3>Someone picks up.</h3><p>Day or night, the emergency line reaches a person who can send help, not a voicemail box.</p></div>
+    </div>
+    <div class="facts">
+      <div><span class="mono">Florida license</span><b>CAC057175</b></div>
+      <div><span class="mono">Emergency line</span><b><a href="tel:+19547758248">(954) 775-8248</a></b></div>
+      <div><span class="mono">Office</span><b>2501 Dykes Road, Suite 300 D, Miramar, FL</b></div>
+      <div><span class="mono">Hours</span><b>Mon to Fri 9 to 5, Sat 10 to 2</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">&copy; 2026 Reliable Breeze Air Conditioning &amp; Refrigeration / License CAC057175</span>
+    <span class="mono"><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="accessibility.html">Accessibility</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL='info@reliablebreeze.com';
+  var f=document.getElementById('quote'), note=document.getElementById('note');
+  // preselect from links like contact.html?need=install&property=home
+  try{
+    var q=new URLSearchParams(location.search), k=q.get('need'), pr=q.get('property');
+    if(k){var o=f.need.querySelector('option[data-key="'+k.replace(/[^a-z]/g,'')+'"]'); if(o) f.need.value=o.value;}
+    if(pr) f.property.value=(pr==='home'?'Residential':'Commercial');
+  }catch(e){}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.name.value.trim()||!/^\S+@\S+\.\S+$/.test(f.email.value.trim())){note.className='note err';note.textContent='Please add your name and a valid email so we can reply.';(f.name.value.trim()?f.email:f.name).focus();return}
+    var body=['Name: '+f.name.value,'Phone: '+f.phone.value,'Email: '+f.email.value,'Property: '+f.property.value,'Service: '+f.need.value,'',f.message.value].join('\n');
+    location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Quote request: '+f.need.value)+'&body='+encodeURIComponent(body);
+    note.className='note';note.textContent='Your email app should now be open with the request ready to send. If it did not open, call (954) 775-8248.';
+  });
+})();
+</script>
+<script src="a11y.js"></script>
+</body>
+</html>
