@@ -39,3 +39,7 @@ footer{border-top:1px solid var(--line)}
 footer .in{max-width:1320px;margin:0 auto;padding:22px var(--gutter);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--ink-2);margin-left:18px}
 footer a:first-of-type{margin-left:0}
+
+/* official logo lockup */
+.brand img{height:40px!important;width:auto!important;max-width:none}
+@media(max-width:560px){.brand img{height:28px!important}}

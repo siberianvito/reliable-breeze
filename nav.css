@@ -51,3 +51,7 @@ body.menu-open{overflow:hidden}
 @keyframes areabar{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.areabar-track{animation:none}}
 html.a11y-motion .areabar-track{animation:none!important}
+
+/* official logo lockup */
+.brand img{height:40px!important;width:auto!important;max-width:none}
+@media(max-width:560px){.brand img{height:28px!important}}
