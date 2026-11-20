@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siberianvito.github.io/reliable-breeze/sitemap.xml
+Sitemap: https://reliablebreeze.com/sitemap.xml
